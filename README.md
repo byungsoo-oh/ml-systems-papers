@@ -483,7 +483,7 @@ Table of Contents
 - [NeurIPS'22] [Iron: Private Inference on Transformers](https://proceedings.neurips.cc/paper_files/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract-Conference.html)
 
 ## 6. Others
-- [MICRO'23] [Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads](https://www.researchgate.net/profile/Yifan-Sun-16/publication/374160652_Path_Forward_Beyond_Simulators_Fast_and_Accurate_GPU_Execution_Time_Prediction_for_DNN_Workloads/links/65118243d5293c106ce204d7/Path-Forward-Beyond-Simulators-Fast-and-Accurate-GPU-Execution-Time-Prediction-for-DNN-Workloads.pdf)
+- [MICRO'23] [Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads](https://dl.acm.org/doi/10.1145/3613424.3614277)
 - [OSDI'24 (to appear)] [Automatic and Efficient Customization of Neural Networks for ML Applications](https://arxiv.org/abs/2310.04685)
 
 
