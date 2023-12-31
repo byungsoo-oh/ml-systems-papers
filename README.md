@@ -202,7 +202,6 @@ Table of Contents
 
 ### 2.5 Distributed training (Parallelism)
 #### 2024
-- [openreview, under review at ICLR'24] [AMPipe: Accelerating MoE Model Training with Intra-Block Pipelining](https://openreview.net/forum?id=yLgr02IsXY)
 - [HPCA'24] [Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search](https://arxiv.org/abs/2311.15269)
 - [NSDI'24] Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances
 - [EuroSys'24] [HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis](https://i.cs.hku.hk/~cwu/papers/swzhang-eurosys24.pdf)
