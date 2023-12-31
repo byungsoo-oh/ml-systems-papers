@@ -312,7 +312,7 @@ Table of Contents
 #### 2020
 - [HPCA'20] AccPar: Tensor Partitioning for Heterogeneous Deep Learning Accelerators
 - [NeurIPS'20] Efficient Algorithms for Device Placement of DNN Graph Operators
-- [arxiv ('20)] Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
+- [arxiv'20] Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
 - [KDD'20 Tutorial] DeepSpeed: System Optimizations Enable Training Deep Learning Models with Over 100 Billion Parameters
 - [VLDB'20] PyTorch Distributed: Experiences on Accelerating Data Parallel Training
 - [OSDI'20] A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters (`BytePS`)
