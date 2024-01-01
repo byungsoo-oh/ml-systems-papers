@@ -202,6 +202,7 @@ Table of Contents
 
 ### 2.5 Distributed training (Parallelism)
 #### 2024
+- [VLDB'24] [Saturn: An Optimized Data System for Multi-Large-Model Deep Learning Workloads](https://arxiv.org/abs/2309.01226)
 - [HPCA'24] [Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search](https://arxiv.org/abs/2311.15269)
 - [NSDI'24] Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances
 - [EuroSys'24] [HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis](https://i.cs.hku.hk/~cwu/papers/swzhang-eurosys24.pdf)
@@ -215,7 +216,6 @@ Table of Contents
 - [arxiv'23] [FP8-LM: Training FP8 Large Language Models](https://arxiv.org/abs/2310.18313)
 - [arxiv'23] [Redco: A Lightweight Tool to Automate Distributed Training of LLMs on Any GPU/TPUs](https://arxiv.org/abs/2310.16355)
 - [arxiv'23] [DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models](https://arxiv.org/abs/2309.14509)
-- [submitted to VLDB] [Saturn: An Optimized Data System for Multi-Large-Model Deep Learning Workloads (Information System Architectures)](https://adalabucsd.github.io/papers/TR_2023_Saturn.pdf)
 - [arxiv'23] [A Distributed Data-Parallel PyTorch Implementation of the Distributed Shampoo Optimizer for Training Neural Networks At-Scale](https://arxiv.org/abs/2309.06497)
 - [arxiv'23] [FLM-101B: An Open LLM and How to Train It with $100K Budget](https://arxiv.org/pdf/2309.03852.pdf)
 - [arxiv'23] [UniAP: Unifying Inter- and Intra-Layer Automatic Parallelism by Mixed Integer Quadratic Programming](https://arxiv.org/abs/2307.16375)
