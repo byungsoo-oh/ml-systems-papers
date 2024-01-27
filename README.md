@@ -41,7 +41,8 @@ Table of Contents
   - [3. Inference System](#3-inference-system)
   - [4. Federated Learning](#4-federated-learning)
   - [5. Privacy-Preserving ML](#5-privacy-preserving-ml)
-  - [6. Others](#6-others)
+  - [6. ML APIs \& Application-side Optimization](#6-ml-apis--application-side-optimization)
+  - [Others](#others)
 - [References](#references)
 
 <!-- /TOC -->
@@ -50,6 +51,7 @@ Table of Contents
 
 ### 1.1 Data pipeline optimization
 #### 1.1.1 General
+- [arxiv'24] [cedar: Composable and Optimized Machine Learning Input Data Pipelines](https://arxiv.org/abs/2401.08895)
 - [MLSys'22] Plumber: Diagnosing and Removing Performance Bottlenecks in Machine Learning Data Pipelines
 - [ISCA'22] Understanding Data Storage and Ingestion for Large-Scale Deep Recommendation Model Training
 - [SIGMOD'22] Where Is My Training Bottleneck? Hidden Trade-Offs in Deep Learning Preprocessing Pipelines
@@ -143,6 +145,8 @@ Table of Contents
 - [SIGCOMM'22] Multi-resource interleaving for deep learning training (`Muri`)
 
 - [MLSys'21] Wavelet: Efficient DNN Training with Tick-Tock Scheduling
+- [SoCC'21] Chronus: A Novel Deadline-aware Scheduler for Deep Learning Training Jobs
+- [SC'21] [Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters](https://arxiv.org/abs/2109.01313) (`Helios`)
 - [OSDI'21] Privacy Budget Scheduling (`DPF`)
 - [NSDI'21] Elastic Resource Sharing for Distributed Deep Learning (`AFS`)
 - [OSDI'21] Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning
@@ -174,6 +178,7 @@ Table of Contents
 - [OSDI'20] PipeSwitch: Fast Pipelined Context Switching for Deep Learning Applications
 
 ### 2.3 GPU memory management and optimization
+- [ASPLOS'24] [GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching](https://arxiv.org/abs/2401.08156)
 - [arxiv'23] [Rethinking Memory and Communication Cost for Efficient Large Language Model Training](https://arxiv.org/abs/2310.06003)
 - [arxiv'23] Quantized Distributed Training of Large Models with Convergence Guarantees (`QSDP`)
 - [arxiv'23] Does compressing activations help model parallel training?
@@ -183,11 +188,14 @@ Table of Contents
 - [HPCA'23] MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism
 - [HPCA'23] Tensor Movement Orchestration in Multi-GPU Training Systems
 - [IJCAI'23] [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://www.ijcai.org/proceedings/2023/0238.pdf)
+- [ICLR'22] [LoRA: Low-Rank Adaptation of Large Language Models](https://openreview.net/forum?id=nZeVKeeFYf9)
+  - algorithmic method for memory efficiency
 - [VLDB'22] Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers
 - [ATC'21] ZeRO-Offload: Democratizing Billion-Scale Model Training
 - [ICLR'21] ActNN: Reducing Training Memory Footprint via 2-Bit Activation Compressed Training
 - [ICLR'21] Dynamic Tensor Rematerialization
 - [SC'21] ZeRO-infinity: breaking the GPU memory wall for extreme scale deep learning
+- [HPCA'21] [Sentinel: Efficient Tensor Migration and Allocation on Heterogeneous Memory Systems for Deep Learning](https://ieeexplore.ieee.org/abstract/document/9407112)
 - [MLSys'20] Checkmate: Breaking the Memory Wall with Optimal Tensor Rematerialization
 - [ASPLOS'20] Capuchin: Tensor-based GPU Memory Management for Deep Learning
 - [ASPLOS'20] SwapAdvisor: Pushing Deep Learning Beyond the GPU Memory Limit via Smart Swapping
@@ -202,6 +210,8 @@ Table of Contents
 
 ### 2.5 Distributed training (Parallelism)
 #### 2024
+- [AAMAS'24] [Holonic Learning: A Flexible Agent-based Distributed Machine Learning Framework](https://arxiv.org/abs/2401.10839)
+- [arxiv'24] [InternEvo: Efficient Long-sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding](https://arxiv.org/abs/2401.09149)
 - [VLDB'24] [Saturn: An Optimized Data System for Multi-Large-Model Deep Learning Workloads](https://arxiv.org/abs/2309.01226)
 - [HPCA'24] [Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search](https://arxiv.org/abs/2311.15269)
 - [NSDI'24] Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances
@@ -317,6 +327,9 @@ Table of Contents
 - [VLDB'20] PyTorch Distributed: Experiences on Accelerating Data Parallel Training
 - [OSDI'20] A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters (`BytePS`)
 - [SOSP'19] PipeDream: Generalized Pipeline Parallelism for DNN Training
+- [NeurIPS'20] [Language Models are Few-Shot Learners](https://proceedings.neurips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html?utm_medium=email&utm_source=transaction) [**From OpenAI**]
+  - [arxiv](https://arxiv.org/abs/2005.14165)
+- [arxiv'20] [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) [**From OpenAI**]
 
 #### ~2019
 - [HPCA'19] [HyPar: Towards Hybrid Parallelism for Deep Learning Accelerator Array](https://arxiv.org/abs/1901.02067)
@@ -369,16 +382,17 @@ Table of Contents
 - [ISCA'22] Themis: a network bandwidth-aware collective scheduling policy for distributed training of DL models
 - [SC'22] HammingMesh: A Network Topology for Large-Scale Deep Learning
 - [PPoPP'22] Near-optimal sparse allreduce for distributed deep learning
-- [MLSys'22] [Synthesizing optimal parallelism placement and reduction strategies on hierarchical systems for deep learning](https://proceedings.mlsys.org/paper_files/paper/2022/hash/f0f9e98bc2e2f0abc3e315eaa0d808fc-Abstract.html)
+- [MLSys'22] [Synthesizing optimal parallelism placement and reduction strategies on hierarchical systems for deep learning](https://proceedings.mlsys.org/paper_files/paper/2022/hash/f0f9e98bc2e2f0abc3e315eaa0d808fc-Abstract.html) (`P^2`)
   - [arxiv](https://arxiv.org/abs/2110.10548)
 - [SIGMOD'21] Heterogeneity-Aware Distributed Machine Learning Training via Partial Reduce [also in [2.5](#25-parallelism--distributed-training)]
 - [SC'21] Flare: flexible in-network allreduce
 - [NSDI'21] [Scaling Distributed Machine Learning with In-Network Aggregation](https://www.usenix.org/conference/nsdi21/presentation/sapio)
 - [ISCA'21] Enabling compute-communication overlap in distributed deep learning training platforms
+- [PPoPP'21] [Synthesizing optimal collective algorithms](https://dl.acm.org/doi/10.1145/3437801.3441620) (`SCCL`)
 - [PPoPP'20] Taming unbalanced training workloads in deep learning with partial collective operations
-- [MLSys'20] Blink: Fast and Generic Collectives for Distributed ML
+- [MLSys'20] [Blink: Fast and Generic Collectives for Distributed ML](https://proceedings.mlsys.org/paper_files/paper/2020/hash/cd3a9a55f7f3723133fa4a13628cdf03-Abstract.html)
 - [MLSys'20] [PLink: Discovering and Exploiting Datacenter Network Locality for Efficient Cloud-based Distributed Training](https://proceedings.mlsys.org/paper_files/paper/2020/hash/eca986d585a03890a412587a2f5ccb43-Abstract.html)
-- [MLSys'19] Priority-based Parameter Propagation for Distributed DNN Training
+- [MLSys'19] [Priority-based Parameter Propagation for Distributed DNN Training](https://arxiv.org/abs/1905.03960) (`P3`)
 - [MLSys'19] TicTac: Accelerating Distributed Deep Learning with Communication Scheduling
 - [SOSP'19] A generic communication scheduler for distributed DNN training acceleration (`ByteScheduler`)
 - [ATC'17] Poseidon: An Efficient Communication Architecture for Distributed Deep Learning on GPU Clusters
@@ -423,8 +437,19 @@ Table of Contents
 
 
 ## 3. Inference System
+- [arxiv'24] [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](https://arxiv.org/abs/2401.11240)
+- [arxiv'24] [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](https://arxiv.org/abs/2401.11181)
+- [arxiv'24] [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](https://arxiv.org/abs/2401.09670)
+- [arxiv'24] [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](https://arxiv.org/abs/2401.08671)
+- [Survey :mag:] [arxiv'24] [Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding](https://arxiv.org/abs/2401.07851)
+- [arxiv'24] [Learned Best-Effort LLM Serving](https://arxiv.org/abs/2401.07886)
+- [arxiv'24] [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](https://arxiv.org/abs/2401.02669)
 - [VLDB'24] [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](https://www.vldb.org/pvldb/vol17/p211-xia.pdf)
 - [ASPLOS'24] [SpotServe: Serving Generative Large Language Models on Preemptible Instances](https://arxiv.org/abs/2311.15566)
+- [arxiv'23] [SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification](https://arxiv.org/abs/2305.09781)
+- [arxiv'23] [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](https://arxiv.org/abs/2309.08168)
+- [arxiv'23] [Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving](https://arxiv.org/abs/2312.05385)
+- [arxiv'23] [Fairness in Serving Large Language Models](https://arxiv.org/abs/2401.00588)
 - [arxiv'23] [HexGen: Generative Inference of Foundation Model over Heterogeneous Decentralized Environment](https://arxiv.org/abs/2311.11514)
 - [arxiv'23] [Moirai: Towards Optimal Placement for Distributed Inference on Heterogeneous Devices](https://arxiv.org/abs/2312.04025)
 - [arxiv'23] [Punica: Multi-Tenant LoRA Serving](https://arxiv.org/abs/2310.18547)
@@ -441,6 +466,7 @@ Table of Contents
 - [OSDI'23] AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving
 - [NSDI'23] SHEPHERD: Serving DNNs in the Wild
 - [VLDB'23] Serving and Optimizing Machine Learning Workflows on Heterogeneous Infrastructures
+- [ICML'23] [Fast Inference from Transformers via Speculative Decoding](https://proceedings.mlr.press/v202/leviathan23a.html)
 - [SIGMOD'22] Serverless Data Science - Are We There Yet? A Case Study of Model Serving
 - [OSDI'22] Orca: A Distributed Serving System for Transformer-Based Generative Models
 - [OSDI'22] Microsecond-scale Preemption for Concurrent GPU-accelerated DNN Inferences
@@ -482,9 +508,15 @@ Table of Contents
 - [ICLR'23] [MPCFormer: fast, performant and private Transformer inference with MPC](https://arxiv.org/abs/2211.01452)
 - [NeurIPS'22] [Iron: Private Inference on Transformers](https://proceedings.neurips.cc/paper_files/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract-Conference.html)
 
-## 6. Others
-- [MICRO'23] [Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads](https://dl.acm.org/doi/10.1145/3613424.3614277)
+
+## 6. ML APIs & Application-side Optimization
 - [OSDI'24 (to appear)] [Automatic and Efficient Customization of Neural Networks for ML Applications](https://arxiv.org/abs/2310.04685)
+- [ICML'22] [Efficient Online ML API Selection for Multi-Label Classification Tasks](https://proceedings.mlr.press/v162/chen22ad.html) (`FrugalMCT`)
+- [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
+
+## Others
+- [Survey :mag:] [arxiv'24] [A Survey of Resource-efficient LLM and Multimodal Foundation Models](https://arxiv.org/abs/2401.08092)
+- [MICRO'23] [Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads](https://dl.acm.org/doi/10.1145/3613424.3614277)
 
 
 # References
