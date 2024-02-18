@@ -545,7 +545,7 @@ Table of Contents
 - [arxiv'24] [Large Language Model Adaptation for Networking](https://arxiv.org/abs/2402.02338)
 - [arxiv'24] [LLM-Enhanced Data Management](https://arxiv.org/abs/2402.02643)
 - [arxiv'24] [MPIrigen: MPI Code Generation through Domain-Specific Language Models](https://arxiv.org/abs/2402.09126)
-- - [arxiv'24] [Can Large Language Models Write Parallel Code?](https://arxiv.org/abs/2401.12554)
+- [arxiv'24] [Can Large Language Models Write Parallel Code?](https://arxiv.org/abs/2401.12554)
 - [VLDB'23] [How Large Language Models Will Disrupt Data Management](https://dl.acm.org/doi/abs/10.14778/3611479.3611527)
 
 ## Others
