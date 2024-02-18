@@ -42,6 +42,7 @@ Table of Contents
   - [4. Federated Learning](#4-federated-learning)
   - [5. Privacy-Preserving ML](#5-privacy-preserving-ml)
   - [6. ML APIs \& Application-side Optimization](#6-ml-apis--application-side-optimization)
+  - [7. ML for Systems](#7-ml-for-systems)
   - [Others](#others)
 - [References](#references)
 
@@ -60,6 +61,7 @@ Table of Contents
 
 
 #### 1.1.2 Prep stalls
+- [VLDB'24] [FusionFlow: Accelerating Data Preprocessing for Machine Learning with CPU-GPU Cooperation](https://www.vldb.org/pvldb/vol17/p863-kim.pdf)
 - [arxiv'23] [Rinas: Training with Dataset Shuffling Can Be General and Fast](https://arxiv.org/abs/2312.02368)
 - [CVPR'23] [FFCV: Accelerating Training by Removing Data Bottlenecks](https://openaccess.thecvf.com/content/CVPR2023/papers/Leclerc_FFCV_Accelerating_Training_by_Removing_Data_Bottlenecks_CVPR_2023_paper.pdf)
 - [RecSys'23] [InTune: Reinforcement Learning-based Data Pipeline Optimization for Deep Recommendation Models](https://arxiv.org/abs/2308.08500)
@@ -122,8 +124,11 @@ Table of Contents
 
 ## 2. Training System
 ### 2.1 DL scheduling
-- [EuroSys'24 (to appear)] [Blox: A Modular Toolkit for Deep Learning Schedulers](https://arxiv.org/abs/2312.12621)
-- [NSDI'24 (to appear)] [CASSINI: Network-Aware Job Scheduling in Machine Learning Clusters](https://arxiv.org/abs/2308.00852)
+- [EuroSys'24] [Blox: A Modular Toolkit for Deep Learning Schedulers](https://arxiv.org/abs/2312.12621)
+- [NSDI'24] Swing: Short-cutting Rings for Higher Bandwidth Allreduce
+- [NSDI'24] Towards Domain-Specific Network Transport for Distributed DNN Training
+- [NSDI'24] Vulcan: Automatic Query Planning for Live ML Analytics
+- [NSDI'24] [CASSINI: Network-Aware Job Scheduling in Machine Learning Clusters](https://arxiv.org/abs/2308.00852)
 
 - [Survey :mag:] [ACM CSUR'23] [Deep Learning Workload Scheduling in GPU Datacenters: A Survey](https://dl.acm.org/doi/10.1145/3638757)
 - [arxiv'23] Energy-Efficient GPU Clusters Scheduling for Deep Learning
@@ -210,6 +215,17 @@ Table of Contents
 
 ### 2.5 Distributed training (Parallelism)
 #### 2024
+- [arxiv'24] [Training DNN Models over Heterogeneous Clusters with Optimal Performance](https://arxiv.org/abs/2402.05302)
+- [NSDI'24] DISTMM: Accelerating Distributed Multi-modal Model Training
+- [NSDI'24] Accelerating Neural Recommendation Training with Embedding Scheduling
+- [NSDI'24] Resiliency at Scale: Managing Google’s TPUv4 Machine Learning Supercomputer
+- [NSDI'24] QuickUpdate: a Real-Time Personalization System for Large-Scale Recommendation Models
+- [NSDI'24] Scaling Large Language Model Training to More Than 10,000 GPUs
+- [arxiv'24] [Breaking MLPerf Training: A Case Study on Optimizing BERT](https://arxiv.org/abs/2402.02447)
+- [ICLR'24] CO2: Efficient Distributed Training with Full Communication-Computation Overlap
+  - [arxiv](https://arxiv.org/abs/2401.16265) [openreview](https://openreview.net/forum?id=ZO5cn4IfaN)
+- [arxiv'24] [LocMoE: A Low-overhead MoE for Large Language Model Training](https://arxiv.org/abs/2401.13920)
+- [arxiv'24] [Re-evaluating the Memory-balanced Pipeline Parallelism: BPipe](https://arxiv.org/abs/2401.02088)
 - [AAMAS'24] [Holonic Learning: A Flexible Agent-based Distributed Machine Learning Framework](https://arxiv.org/abs/2401.10839)
 - [arxiv'24] [InternEvo: Efficient Long-sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding](https://arxiv.org/abs/2401.09149)
 - [VLDB'24] [Saturn: An Optimized Data System for Multi-Large-Model Deep Learning Workloads](https://arxiv.org/abs/2309.01226)
@@ -218,6 +234,8 @@ Table of Contents
 - [EuroSys'24] [HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis](https://i.cs.hku.hk/~cwu/papers/swzhang-eurosys24.pdf)
 
 #### 2023
+- [ICPP'23] Mercury: Fast and Optimal Device Placement for Large Deep Learning Models
+- [arxiv'23] [TENPLEX: Changing Resources of Deep Learning Jobs using Parallelizable Tensor Collections](https://arxiv.org/abs/2312.05181)
 - [arxiv'23] [vTrain: A Simulation Framework for Evaluating Cost-effective and Compute-optimal Large Language Model Training](https://arxiv.org/abs/2312.12391)
 - [arxiv'23] [ASPEN: High-Throughput LoRA Fine-Tuning of Large Language Models with a Single GPU](https://arxiv.org/abs/2312.02515)
 - [arxiv'23] [FlexModel: A Framework for Interpretability of Distributed Large Language Models](https://arxiv.org/abs/2312.03140)
@@ -361,6 +379,8 @@ Table of Contents
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
 ### 2.9 Communication optimization
+- [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
+- [NSDI'24] [THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression](https://arxiv.org/abs/2302.08545)
 - [arxiv'23] [Optimized Network Architectures for Large Language Model Training with Billions of Parameters](https://arxiv.org/abs/2307.12169)
 - [arxiv'23] [FlexShard: Flexible Sharding for Industry-Scale Sequence Recommendation Models](https://arxiv.org/abs/2301.02959)
 - [arxiv'23] [Rethinking Memory and Communication Cost for Efficient Large Language Model Training](https://arxiv.org/abs/2310.06003)
@@ -435,8 +455,14 @@ Table of Contents
 - [VLDB'22] [TGL: a general framework for temporal GNN training on billion-scale graphs](https://www.vldb.org/pvldb/vol15/p1572-zhou.pdf)
 - [OSDI'21] [P3: Distributed Deep Graph Learning at Scale](https://www.usenix.org/conference/osdi21/presentation/gandhi)
 
-
 ## 3. Inference System
+- [NSDI'24] Approximate Caching for Efficiently Serving Diffusion Models
+- [NSDI'24] Characterization of Large Language Model Development in the Datacenter
+- [arxiv'24] [APIServe: Efficient API Support for Large-Language Model Inferencing](https://arxiv.org/abs/2402.01869)
+- [arxiv'24] [ServerlessLLM: Locality-Enhanced Serverless Inference for Large Language Models](https://arxiv.org/abs/2401.14351)
+- [arxiv'24] [MoE-Infinity: Activation-Aware Expert Offloading for Efficient MoE Serving](https://arxiv.org/abs/2401.14361)
+- [arxiv'24] [FP6-LLM: Efficiently Serving Large Language Models Through FP6-Centric Algorithm-System Co-Design](https://arxiv.org/abs/2401.14112)
+- [arxiv'24] [Accelerating Retrieval-Augmented Language Model Serving with Speculation](https://arxiv.org/abs/2401.14021)
 - [arxiv'24] [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](https://arxiv.org/abs/2401.11240)
 - [arxiv'24] [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](https://arxiv.org/abs/2401.11181)
 - [arxiv'24] [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](https://arxiv.org/abs/2401.09670)
@@ -446,6 +472,7 @@ Table of Contents
 - [arxiv'24] [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](https://arxiv.org/abs/2401.02669)
 - [VLDB'24] [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](https://www.vldb.org/pvldb/vol17/p211-xia.pdf)
 - [ASPLOS'24] [SpotServe: Serving Generative Large Language Models on Preemptible Instances](https://arxiv.org/abs/2311.15566)
+- [arxiv'23] [Splitwise: Efficient generative LLM inference using phase splitting](https://arxiv.org/abs/2311.18677)
 - [arxiv'23] [SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification](https://arxiv.org/abs/2305.09781)
 - [arxiv'23] [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](https://arxiv.org/abs/2309.08168)
 - [arxiv'23] [Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving](https://arxiv.org/abs/2312.05385)
@@ -508,14 +535,24 @@ Table of Contents
 - [ICLR'23] [MPCFormer: fast, performant and private Transformer inference with MPC](https://arxiv.org/abs/2211.01452)
 - [NeurIPS'22] [Iron: Private Inference on Transformers](https://proceedings.neurips.cc/paper_files/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract-Conference.html)
 
-
 ## 6. ML APIs & Application-side Optimization
+- [arxiv'24] [APIServe: Efficient API Support for Large-Language Model Inferencing](https://arxiv.org/abs/2402.01869)
 - [OSDI'24 (to appear)] [Automatic and Efficient Customization of Neural Networks for ML Applications](https://arxiv.org/abs/2310.04685)
 - [ICML'22] [Efficient Online ML API Selection for Multi-Label Classification Tasks](https://proceedings.mlr.press/v162/chen22ad.html) (`FrugalMCT`)
 - [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
 
+## 7. ML for Systems
+- [arxiv'24] [Large Language Model Adaptation for Networking](https://arxiv.org/abs/2402.02338)
+- [arxiv'24] [LLM-Enhanced Data Management](https://arxiv.org/abs/2402.02643)
+- [arxiv'24] [MPIrigen: MPI Code Generation through Domain-Specific Language Models](https://arxiv.org/abs/2402.09126)
+- - [arxiv'24] [Can Large Language Models Write Parallel Code?](https://arxiv.org/abs/2401.12554)
+- [VLDB'23] [How Large Language Models Will Disrupt Data Management](https://dl.acm.org/doi/abs/10.14778/3611479.3611527)
+
 ## Others
+- [arxiv'24] [You Only Need One Step: Fast Super-Resolution with Stable Diffusion via Scale Distillation](https://arxiv.org/abs/2401.17258)
+- [arxiv'24] [Computing in the Era of Large Generative Models: From Cloud-Native to AI-Native](https://arxiv.org/abs/2401.12230)
 - [Survey :mag:] [arxiv'24] [A Survey of Resource-efficient LLM and Multimodal Foundation Models](https://arxiv.org/abs/2401.08092)
+- [arxiv'23] [Efficiently Programming Large Language Models using SGLang](https://arxiv.org/abs/2312.07104)
 - [MICRO'23] [Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads](https://dl.acm.org/doi/10.1145/3613424.3614277)
 
 
