@@ -38,6 +38,7 @@ Table of Contents
     - [2.11 DNN compiler](#211-dnn-compiler)
     - [2.12 Model pruning and compression](#212-model-pruning-and-compression)
     - [2.13 GNN training system](#213-gnn-training-system)
+    - [2.14 Congestion control for DNN training](#214-congestion-control-for-dnn-training)
   - [3. Inference System](#3-inference-system)
   - [4. Federated Learning](#4-federated-learning)
   - [5. Privacy-Preserving ML](#5-privacy-preserving-ml)
@@ -215,6 +216,10 @@ Table of Contents
 
 ### 2.5 Distributed training (Parallelism)
 #### 2024
+- [ICLR'24] [Zero Bubble (Almost) Pipeline Parallelism](https://openreview.net/forum?id=tuzTN0eIO5)
+- [arxiv'24] [BitDelta: Your Fine-Tune May Only Be Worth One Bit](https://arxiv.org/abs/2402.10193)
+- [arxiv'24] [NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models](https://arxiv.org/abs/2402.09773)
+- [arxiv'24] [Accelerating Parallel Sampling of Diffusion Models](https://arxiv.org/abs/2402.09970)
 - [arxiv'24] [Training DNN Models over Heterogeneous Clusters with Optimal Performance](https://arxiv.org/abs/2402.05302)
 - [NSDI'24] DISTMM: Accelerating Distributed Multi-modal Model Training
 - [NSDI'24] Accelerating Neural Recommendation Training with Embedding Scheduling
@@ -352,7 +357,7 @@ Table of Contents
 #### ~2019
 - [HPCA'19] [HyPar: Towards Hybrid Parallelism for Deep Learning Accelerator Array](https://arxiv.org/abs/1901.02067)
 - [IEEE MICRO'19] [Optimizing Multi-GPU Parallelization Strategies for Deep Learning Training](https://arxiv.org/abs/1907.13257)
-- [MLSys'19] Beyond data and model parallelism for deep neural networks
+- [MLSys'19] [Beyond data and model parallelism for deep neural networks](https://arxiv.org/abs/1807.05358) (`FlexFlow`)
 - [MLSys'19] TicTac: Accelerating Distributed Deep Learning with Communication Scheduling
 - [EuroSys'19] Parallax: Sparsity-aware Data Parallel Training of Deep Neural Networks
 - [EuroSys'19] Supporting Very Large Models using Automatic Dataflow Graph Partitioning (`Tofu`)
@@ -379,6 +384,7 @@ Table of Contents
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
 ### 2.9 Communication optimization
+- [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
 - [NSDI'24] [THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression](https://arxiv.org/abs/2302.08545)
 - [arxiv'23] [Optimized Network Architectures for Large Language Model Training with Billions of Parameters](https://arxiv.org/abs/2307.12169)
@@ -455,7 +461,14 @@ Table of Contents
 - [VLDB'22] [TGL: a general framework for temporal GNN training on billion-scale graphs](https://www.vldb.org/pvldb/vol15/p1572-zhou.pdf)
 - [OSDI'21] [P3: Distributed Deep Graph Learning at Scale](https://www.usenix.org/conference/osdi21/presentation/gandhi)
 
+### 2.14 Congestion control for DNN training
+- [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
+- [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
+
 ## 3. Inference System
+- [arxiv'24] [Wisdom of Committee: Distilling from Foundation Model to SpecializedApplication Model](https://arxiv.org/abs/2402.14035)
+- [arxiv'24] [RelayAttention for Efficient Large Language Model Serving with Long System Prompts](https://arxiv.org/abs/2402.14808)
+- [PPoPP'24 poster] [POSTER: LLM-PQ:Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](https://dl.acm.org/doi/abs/10.1145/3627535.3638480)
 - [NSDI'24] Approximate Caching for Efficiently Serving Diffusion Models
 - [NSDI'24] Characterization of Large Language Model Development in the Datacenter
 - [arxiv'24] [APIServe: Efficient API Support for Large-Language Model Inferencing](https://arxiv.org/abs/2402.01869)
@@ -507,6 +520,7 @@ Table of Contents
 - [MobiCom'20] SPINN: Synergistic Progressive Inference of Neural Networks over Device and Cloud
 
 ## 4. Federated Learning
+- [SAC'24] [Training Heterogeneous Client Models using Knowledge Distillation in Serverless Federated Learning](https://arxiv.org/abs/2402.07295)
 - [arxiv'23] [CAFE: Carbon-Aware Federated Learning in Geographically Distributed Data Centers](https://arxiv.org/abs/2311.03615)
 - [arxiv'23] [Federated Learning of Large Language Models with Parameter-Efficient Prompt Tuning and Adaptive Optimization](https://arxiv.org/abs/2310.15080)
 - [IMWUT'23] [AttFL: A Personalized Federated Learning Framework for Time-series Mobile and Embedded Sensor Data Processing](https://dl.acm.org/doi/abs/10.1145/3610917)
@@ -546,7 +560,9 @@ Table of Contents
 - [arxiv'24] [LLM-Enhanced Data Management](https://arxiv.org/abs/2402.02643)
 - [arxiv'24] [MPIrigen: MPI Code Generation through Domain-Specific Language Models](https://arxiv.org/abs/2402.09126)
 - [arxiv'24] [Can Large Language Models Write Parallel Code?](https://arxiv.org/abs/2401.12554)
-- [VLDB'23] [How Large Language Models Will Disrupt Data Management](https://dl.acm.org/doi/abs/10.14778/3611479.3611527)
+- [arxiv'23] [LLM-Assisted Code Cleaning For Training Accurate Code Generators](https://arxiv.org/abs/2311.14904)
+- [arxiv'23] [Large Language Models for Compiler Optimization](https://arxiv.org/abs/2309.07062)
+- [VLDB'23] [How Large Language Models Will Disrupt Data Management](https://www.vldb.org/pvldb/vol16/p3302-fernandez.pdf)
 
 ## Others
 - [arxiv'24] [You Only Need One Step: Fast Super-Resolution with Stable Diffusion via Scale Distillation](https://arxiv.org/abs/2401.17258)
@@ -557,6 +573,7 @@ Table of Contents
 
 
 # References
+This repository is motivated by:
 - https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning
 - https://github.com/S-Lab-System-Group/Awesome-DL-Scheduling-Papers
 - https://github.com/ganler/ResearchReading
