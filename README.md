@@ -225,7 +225,7 @@ Table of Contents
 - [NSDI'24] Accelerating Neural Recommendation Training with Embedding Scheduling
 - [NSDI'24] Resiliency at Scale: Managing Google’s TPUv4 Machine Learning Supercomputer
 - [NSDI'24] QuickUpdate: a Real-Time Personalization System for Large-Scale Recommendation Models
-- [NSDI'24] Scaling Large Language Model Training to More Than 10,000 GPUs
+- [NSDI'24] [Scaling Large Language Model Training to More Than 10,000 GPUs](https://arxiv.org/abs/2402.15627)
 - [arxiv'24] [Breaking MLPerf Training: A Case Study on Optimizing BERT](https://arxiv.org/abs/2402.02447)
 - [ICLR'24] CO2: Efficient Distributed Training with Full Communication-Computation Overlap
   - [arxiv](https://arxiv.org/abs/2401.16265) [openreview](https://openreview.net/forum?id=ZO5cn4IfaN)
@@ -239,6 +239,7 @@ Table of Contents
 - [EuroSys'24] [HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis](https://i.cs.hku.hk/~cwu/papers/swzhang-eurosys24.pdf)
 
 #### 2023
+- [arxiv'23] [LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers](https://arxiv.org/abs/2310.03294)
 - [ICPP'23] Mercury: Fast and Optimal Device Placement for Large Deep Learning Models
 - [arxiv'23] [TENPLEX: Changing Resources of Deep Learning Jobs using Parallelizable Tensor Collections](https://arxiv.org/abs/2312.05181)
 - [arxiv'23] [vTrain: A Simulation Framework for Evaluating Cost-effective and Compute-optimal Large Language Model Training](https://arxiv.org/abs/2312.12391)
@@ -466,6 +467,8 @@ Table of Contents
 - [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
 
 ## 3. Inference System
+- [ICLR'24] [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](https://arxiv.org/abs/2310.01801)
+- [arxiv'24] [FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning](https://arxiv.org/abs/2402.18789)
 - [arxiv'24] [Wisdom of Committee: Distilling from Foundation Model to SpecializedApplication Model](https://arxiv.org/abs/2402.14035)
 - [arxiv'24] [RelayAttention for Efficient Large Language Model Serving with Long System Prompts](https://arxiv.org/abs/2402.14808)
 - [PPoPP'24 poster] [POSTER: LLM-PQ:Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](https://dl.acm.org/doi/abs/10.1145/3627535.3638480)
