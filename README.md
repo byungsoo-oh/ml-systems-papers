@@ -31,15 +31,15 @@ Table of Contents
       - [2020](#2020)
       - [~2019](#2019)
       - [Survey Papers](#survey-papers)
-    - [2.6 DL job failures](#26-dl-job-failures)
-    - [2.7 Model checkpointing](#27-model-checkpointing)
-    - [2.8 AutoML](#28-automl)
-    - [2.9 Communication optimization](#29-communication-optimization)
-    - [2.10 Energy-efficient DNN training (carbon-aware)](#210-energy-efficient-dnn-training-carbon-aware)
-    - [2.11 DNN compiler](#211-dnn-compiler)
-    - [2.12 Model pruning and compression](#212-model-pruning-and-compression)
-    - [2.13 GNN training system](#213-gnn-training-system)
-    - [2.14 Congestion control for DNN training](#214-congestion-control-for-dnn-training)
+    - [2.7 DL job failures](#27-dl-job-failures)
+    - [2.8 Model checkpointing](#28-model-checkpointing)
+    - [2.9 AutoML](#29-automl)
+    - [2.10 Communication optimization](#210-communication-optimization)
+    - [2.11 Energy-efficient DNN training (carbon-aware)](#211-energy-efficient-dnn-training-carbon-aware)
+    - [2.12 DNN compiler](#212-dnn-compiler)
+    - [2.13 Model pruning and compression](#213-model-pruning-and-compression)
+    - [2.14 GNN training system](#214-gnn-training-system)
+    - [2.15 Congestion control for DNN training](#215-congestion-control-for-dnn-training)
   - [3. Inference System](#3-inference-system)
   - [4. Federated Learning](#4-federated-learning)
   - [5. Privacy-Preserving ML](#5-privacy-preserving-ml)
@@ -225,6 +225,7 @@ Table of Contents
 
 ### 2.6 Distributed training (Parallelism)
 #### 2024
+- [arxiv'24] [BurstAttention: An Efficient Distributed Attention Framework for Extremely Long Sequences](https://arxiv.org/abs/2403.09347)
 - [arxiv'24] [Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](https://arxiv.org/abs/2403.07816)
 - [arxiv'24] [Accelerating Heterogeneous Tensor Parallelism via Flexible Workload Control](https://arxiv.org/abs/2401.11469)
 - [arxiv'24] [GRAWA: Gradient-based Weighted Averaging for Distributed Training of Deep Learning Models](https://arxiv.org/abs/2403.04206)
@@ -233,6 +234,9 @@ Table of Contents
 - [arxiv'24] [NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models](https://arxiv.org/abs/2402.09773)
 - [arxiv'24] [Accelerating Parallel Sampling of Diffusion Models](https://arxiv.org/abs/2402.09970)
 - [arxiv'24] [Training DNN Models over Heterogeneous Clusters with Optimal Performance](https://arxiv.org/abs/2402.05302)
+- [TKDE'24] [Improving Automatic Parallel Training via Balanced Memory Workload Optimization](https://ieeexplore.ieee.org/abstract/document/10449463)
+  - extended version of Galvatron (VLDB'23)
+  - arxiv version (2023): [link](https://arxiv.org/abs/2307.02031)
 - [NSDI'24] DISTMM: Accelerating Distributed Multi-modal Model Training
 - [NSDI'24] Accelerating Neural Recommendation Training with Embedding Scheduling
 - [NSDI'24] Resiliency at Scale: Managing Google’s TPUv4 Machine Learning Supercomputer
@@ -265,8 +269,6 @@ Table of Contents
 - [arxiv'23] [A Distributed Data-Parallel PyTorch Implementation of the Distributed Shampoo Optimizer for Training Neural Networks At-Scale](https://arxiv.org/abs/2309.06497)
 - [arxiv'23] [FLM-101B: An Open LLM and How to Train It with $100K Budget](https://arxiv.org/pdf/2309.03852.pdf)
 - [arxiv'23] [UniAP: Unifying Inter- and Intra-Layer Automatic Parallelism by Mixed Integer Quadratic Programming](https://arxiv.org/abs/2307.16375)
-- [arxiv'23] [Improving Automatic Parallel Training via Balanced Memory Workload Optimization](https://arxiv.org/abs/2307.02031)
-  - extended version of Galvatron (VLDB'23)
 - [arxiv'23] Modeling Parallel Programs using Large Language Models
 - [arxiv'23] [Proteus: Simulating the Performance of Distributed DNN Training](https://arxiv.org/abs/2306.02267)
 - [arxiv'23] Automated Tensor Model Parallelism with Overlapped Communication for Efficient Foundation Model Training
@@ -306,6 +308,7 @@ Table of Contents
 - [NSDI'23] [ARK: GPU-driven Code Execution for Distributed Deep Learning](https://www.usenix.org/conference/nsdi23/presentation/hwang)
 - [SIGMOD'23] FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement
 - [MLSys'23] On Optimizing the Communication of Model Parallelism
+- [MLSys'23] [MegaBlocks: Efficient Sparse Training with Mixture-of-Experts](https://proceedings.mlsys.org/paper_files/paper/2023/hash/5a54f79333768effe7e8927bcccffe40-Abstract-mlsys2023.html)
 - [MLSys'23] [Tutel: Adaptive Mixture-of-Experts at Scale](https://proceedings.mlsys.org/paper_files/paper/2023/hash/9412531719be7ccf755c4ff98d0969dc-Abstract-mlsys2023.html)
 - [TPDS'23] Merak: An Efficient Distributed DNN Training Framework with Automated 3D Parallelism for Giant Foundation Models
 - [PPoPP'23] Elastic Averaging for Efficient Pipelined DNN Training
@@ -316,7 +319,6 @@ Table of Contents
 - [ASPLOS'23] Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression
 
 #### 2022
-- [arxiv'22] [MegaBlocks: Efficient Sparse Training with Mixture-of-Experts](https://arxiv.org/abs/2211.15841)
 - [arxiv'22] Colossal-AI: A Unified Deep Learning System For Large-Scale Parallel Training
 - [arxiv'22] Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model
 - [ICPP'22] [Tesseract: Parallelize the Tensor Parallelism Efficiently](https://arxiv.org/abs/2105.14500)
@@ -332,6 +334,7 @@ Table of Contents
 - [NeurIPS'22] [AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness](https://arxiv.org/abs/2210.07297)
 - [PPoPP'22] [FasterMoE: modeling and optimizing training of large-scale dynamic pre-trained models](https://dl.acm.org/doi/abs/10.1145/3503221.3508418)
 - [ICML'22] [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](https://arxiv.org/abs/2201.05596)
+- [ICML'22] [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](https://proceedings.mlr.press/v162/du22c/du22c.pdf)
 - [HPDC'22] Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs
 - [OSDI'22] Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning
 - [NSDI'22] Accelerating Collective Communication in Data Parallel Training across Deep Learning Frameworks
@@ -384,19 +387,19 @@ Table of Contents
 - [Survey :mag:] [ACM CSUR'19] Demystifying Parallel and Distributed Deep Learning
 - [Survey :mag:] [ACM CSUR'19] Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools
 
-### 2.6 DL job failures
+### 2.7 DL job failures
 - [ATC'22] Sibylla: To Retry or Not To Retry on Deep Learning Job Failure
 - [ICSE'20] An Empirical Study on Program Failures of Deep Learning Jobs
 
-### 2.7 Model checkpointing
+### 2.8 Model checkpointing
 - [FAST'21] CheckFreq: Frequent, Fine-Grained DNN Checkpointing
 
-### 2.8 AutoML
+### 2.9 AutoML
 - [OSDI'23] Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters
 - [NSDI'23] ModelKeeper: Accelerating DNN Training via Automated Training Warmup
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
-### 2.9 Communication optimization
+### 2.10 Communication optimization
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
 - [NSDI'24] [THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression](https://arxiv.org/abs/2302.08545)
@@ -428,6 +431,7 @@ Table of Contents
 - [NSDI'21] [Scaling Distributed Machine Learning with In-Network Aggregation](https://www.usenix.org/conference/nsdi21/presentation/sapio)
 - [ISCA'21] Enabling compute-communication overlap in distributed deep learning training platforms
 - [PPoPP'21] [Synthesizing optimal collective algorithms](https://dl.acm.org/doi/10.1145/3437801.3441620) (`SCCL`)
+- [SIGCOMM'21] [SiP-ML: High-Bandwidth Optical Network Interconnects for Machine Learning Training](https://people.csail.mit.edu/ghobadi/papers/sipml_sigcomm_2021.pdf)
 - [PPoPP'20] Taming unbalanced training workloads in deep learning with partial collective operations
 - [MLSys'20] [Blink: Fast and Generic Collectives for Distributed ML](https://proceedings.mlsys.org/paper_files/paper/2020/hash/cd3a9a55f7f3723133fa4a13628cdf03-Abstract.html)
 - [MLSys'20] [PLink: Discovering and Exploiting Datacenter Network Locality for Efficient Cloud-based Distributed Training](https://proceedings.mlsys.org/paper_files/paper/2020/hash/eca986d585a03890a412587a2f5ccb43-Abstract.html)
@@ -436,13 +440,13 @@ Table of Contents
 - [SOSP'19] A generic communication scheduler for distributed DNN training acceleration (`ByteScheduler`)
 - [ATC'17] Poseidon: An Efficient Communication Architecture for Distributed Deep Learning on GPU Clusters
 
-### 2.10 Energy-efficient DNN training (carbon-aware)
+### 2.11 Energy-efficient DNN training (carbon-aware)
 - [arxiv'23] [Perseus: Removing Energy Bloat from Large Model Training](https://arxiv.org/abs/2312.06902)
 - [arxiv'23] [CAFE: Carbon-Aware Federated Learning in Geographically Distributed Data Centers](https://arxiv.org/abs/2311.03615)
 - [ATC'23] EnvPipe: Performance-preserving DNN Training Framework for Saving Energy
 - [NSDI'23] Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training
 
-### 2.11 DNN compiler
+### 2.12 DNN compiler
 - [OSDI'23] Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning
 - [OSDI'23] Welder: Scheduling Deep Learning Memory Access via Tile-graph
 - [OSDI'23] Effectively Scheduling Computational Graphs of Deep Neural Networks toward Their Domain-Specific Accelerators
@@ -453,13 +457,13 @@ Table of Contents
 - [ASPLOS'20] [FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System](https://dl.acm.org/doi/10.1145/3373376.3378508)
 - [OSDI'18] [TVM: An Automated End-to-End Optimizing Compiler for Deep Learning](https://www.usenix.org/conference/osdi18/presentation/chen)
 
-### 2.12 Model pruning and compression
+### 2.13 Model pruning and compression
 - [ACL'23] [Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes](https://arxiv.org/abs/2305.02301)
 - [ICLR'23] [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](https://arxiv.org/abs/2210.17323)
 - [OSDI'23] [AdaEmbed: Adaptive Embedding for Large-Scale Recommendation Models](https://www.usenix.org/conference/osdi23/presentation/lai)
 - [ICML'22] [TSPipe: Learn from Teacher Faster with Pipelines](https://proceedings.mlr.press/v162/lim22a.html)
 
-### 2.13 GNN training system
+### 2.14 GNN training system
 > For comprehensive list of GNN systems papers, refer to [https://github.com/chwan1016/awesome-gnn-systems](https://github.com/chwan1016/awesome-gnn-systems).
 
 - [VLDB'24] [NeutronStream: A Dynamic GNN Training Framework with Sliding Window for Graph Streams](https://arxiv.org/abs/2312.02473)
@@ -474,11 +478,15 @@ Table of Contents
 - [VLDB'22] [TGL: a general framework for temporal GNN training on billion-scale graphs](https://www.vldb.org/pvldb/vol15/p1572-zhou.pdf)
 - [OSDI'21] [P3: Distributed Deep Graph Learning at Scale](https://www.usenix.org/conference/osdi21/presentation/gandhi)
 
-### 2.14 Congestion control for DNN training
+### 2.15 Congestion control for DNN training
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
 
 ## 3. Inference System
+- [arxiv'24] [Learn To be Efficient: Build Structured Sparsity in Large Language Models](https://arxiv.org/abs/2402.06126)
+- [arxiv'24] [Sponge: Inference Serving with Dynamic SLOs Using In-Place Vertical Scaling](https://arxiv.org/abs/2404.00704v1)
+- [arxiv'24] [MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving](https://arxiv.org/abs/2404.02015)
+- [ISCA'24] [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](https://arxiv.org/abs/2308.12066)
 - [arxiv'24] [Minions: Accelerating Large Language Model Inference with Adaptive and Collective Speculative Decoding](https://arxiv.org/abs/2402.15678)
 - [arxiv'24] [ALTO: An Efficient Network Orchestrator for Compound AI Systems](https://arxiv.org/abs/2403.04311)
 - [ASPLOS'24] [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](https://arxiv.org/abs/2403.00579)
