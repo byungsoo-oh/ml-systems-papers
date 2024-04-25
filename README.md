@@ -41,10 +41,11 @@ Table of Contents
     - [2.14 GNN training system](#214-gnn-training-system)
     - [2.15 Congestion control for DNN training](#215-congestion-control-for-dnn-training)
   - [3. Inference System](#3-inference-system)
-  - [4. Federated Learning](#4-federated-learning)
-  - [5. Privacy-Preserving ML](#5-privacy-preserving-ml)
-  - [6. ML APIs \& Application-side Optimization](#6-ml-apis--application-side-optimization)
-  - [7. ML for Systems](#7-ml-for-systems)
+  - [4. Mixture of Experts (MoE)](#4-mixture-of-experts-moe)
+  - [5. Federated Learning](#5-federated-learning)
+  - [6. Privacy-Preserving ML](#6-privacy-preserving-ml)
+  - [7. ML APIs \& Application-side Optimization](#7-ml-apis--application-side-optimization)
+  - [8. ML for Systems](#8-ml-for-systems)
   - [Others](#others)
 - [References](#references)
 
@@ -551,7 +552,27 @@ Table of Contents
 - [arxiv'21] Supporting Massive DLRM Inference through Software Defined Memory
 - [MobiCom'20] SPINN: Synergistic Progressive Inference of Neural Networks over Device and Cloud
 
-## 4. Federated Learning
+## 4. Mixture of Experts (MoE)
+> This is the list of papers about MoE training and inference (collected from [2.6](#26-distributed-training-parallelism) and [3](#3-inference-system)).
+
+- [ICLR'24] [Mixture of LoRA Experts](https://openreview.net/forum?id=uWvKBCYh4S)
+- [arxiv'24] [Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](https://arxiv.org/abs/2403.07816)
+- [arxiv'24] [MoE-Infinity: Activation-Aware Expert Offloading for Efficient MoE Serving](https://arxiv.org/abs/2401.14361)
+- [arxiv'24] [LocMoE: A Low-overhead MoE for Large Language Model Training](https://arxiv.org/abs/2401.13920)
+- [ISCA'24] [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](https://arxiv.org/abs/2308.12066)
+- [ATC'23] [Accelerating Distributed MoE Training and Inference with Lina](https://www.usenix.org/conference/atc23/presentation/li-jiamin)
+- [ATC'23] [SmartMoE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization](https://www.usenix.org/conference/atc23/presentation/zhai)
+- [SIGMOD'23] FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement
+- [ICS'23] A Hybrid Tensor-Expert-Data Parallelism Approach to Optimize Mixture-of-Experts Training
+- [MLSys'23] [MegaBlocks: Efficient Sparse Training with Mixture-of-Experts](https://proceedings.mlsys.org/paper_files/paper/2023/hash/5a54f79333768effe7e8927bcccffe40-Abstract-mlsys2023.html)
+- [MLSys'23] [Tutel: Adaptive Mixture-of-Experts at Scale](https://proceedings.mlsys.org/paper_files/paper/2023/hash/9412531719be7ccf755c4ff98d0969dc-Abstract-mlsys2023.html)
+- [PPoPP'22] [FasterMoE: modeling and optimizing training of large-scale dynamic pre-trained models](https://dl.acm.org/doi/abs/10.1145/3503221.3508418)
+- [ICML'22] [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](https://arxiv.org/abs/2201.05596)
+- [ICML'22] [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](https://proceedings.mlr.press/v162/du22c/du22c.pdf)
+- [JMLR'22] [Switch transformers: scaling to trillion parameter models with simple and efficient sparsity](https://dl.acm.org/doi/abs/10.5555/3586589.3586709)
+- [ICLR'17] [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://openreview.net/forum?id=B1ckMDqlg)
+
+## 5. Federated Learning
 - [arxiv'24] [Decoupled Vertical Federated Learning for Practical Training on Vertically Partitioned Data](https://arxiv.org/abs/2403.03871v1)
 - [SAC'24] [Training Heterogeneous Client Models using Knowledge Distillation in Serverless Federated Learning](https://arxiv.org/abs/2402.07295)
 - [arxiv'23] [CAFE: Carbon-Aware Federated Learning in Geographically Distributed Data Centers](https://arxiv.org/abs/2311.03615)
@@ -577,18 +598,18 @@ Table of Contents
 - [MLSys'19] Towards Federated Learning at Scale: System Design
 - [Survey :mag:] [ACM CSUR'22] Federated Learning for Smart Healthcare: A Survey
 
-## 5. Privacy-Preserving ML
+## 6. Privacy-Preserving ML
 - [DAC'23] Privacy-Preserving DNN Training with Prefetched Meta-Keys on Heterogeneous Neural Network Accelerators
 - [ICLR'23] [MPCFormer: fast, performant and private Transformer inference with MPC](https://arxiv.org/abs/2211.01452)
 - [NeurIPS'22] [Iron: Private Inference on Transformers](https://proceedings.neurips.cc/paper_files/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract-Conference.html)
 
-## 6. ML APIs & Application-side Optimization
+## 7. ML APIs & Application-side Optimization
 - [arxiv'24] [APIServe: Efficient API Support for Large-Language Model Inferencing](https://arxiv.org/abs/2402.01869)
 - [OSDI'24 (to appear)] [Automatic and Efficient Customization of Neural Networks for ML Applications](https://arxiv.org/abs/2310.04685)
 - [ICML'22] [Efficient Online ML API Selection for Multi-Label Classification Tasks](https://proceedings.mlr.press/v162/chen22ad.html) (`FrugalMCT`)
 - [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
 
-## 7. ML for Systems
+## 8. ML for Systems
 - [arxiv'24] [LLMTune: Accelerate Database Knob Tuning with Large Language Models](https://arxiv.org/abs/2404.11581)
 - [arxiv'24] [Large Language Model Adaptation for Networking](https://arxiv.org/abs/2402.02338)
 - [arxiv'24] [LLM-Enhanced Data Management](https://arxiv.org/abs/2402.02643)
