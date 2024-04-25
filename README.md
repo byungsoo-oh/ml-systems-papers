@@ -132,6 +132,7 @@ Table of Contents
 - [ATC'19] Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads (`Philly`)
 
 ### 2.2 DL scheduling
+- [ASPLOS'24] [Heet: Accelerating Elastic Training in Heterogeneous Deep Learning Clusters](https://dl.acm.org/doi/abs/10.1145/3620665.3640375)
 - [Middleware'24] [Optimal Resource Efficiency with Fairness in Heterogeneous GPU Clusters](https://arxiv.org/abs/2403.18545)
 - [IPDPS'24] Hadar: Heterogeneity-Aware Optimization-Based Online Scheduling for Deep Learning Cluster
 - [EuroSys'24] [Blox: A Modular Toolkit for Deep Learning Schedulers](https://arxiv.org/abs/2312.12621)
@@ -402,6 +403,7 @@ Table of Contents
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
 ### 2.10 Communication optimization
+- [ASPLOS'24] [Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM](https://dl.acm.org/doi/10.1145/3620665.3640427)
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
 - [NSDI'24] [THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression](https://arxiv.org/abs/2302.08545)
