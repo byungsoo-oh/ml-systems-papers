@@ -228,6 +228,9 @@ Table of Contents
 
 ### 2.6 Distributed training (Parallelism)
 #### 2024
+- [ASPLOS'24] [AdaPipe: Optimizing Pipeline Parallelism with Adaptive Recomputation and Partitioning](https://dl.acm.org/doi/abs/10.1145/3620666.3651359)
+- [ASPLOS'24] [PrimePar: Efficient Spatial-temporal Tensor Partitioning for Large Transformer Model Training](https://dl.acm.org/doi/abs/10.1145/3620666.3651357)
+- [EuroSys'24] [Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation](https://dl.acm.org/doi/abs/10.1145/3627703.3629554)
 - [arxiv'24] [BurstAttention: An Efficient Distributed Attention Framework for Extremely Long Sequences](https://arxiv.org/abs/2403.09347)
 - [arxiv'24] [Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](https://arxiv.org/abs/2403.07816)
 - [arxiv'24] [Accelerating Heterogeneous Tensor Parallelism via Flexible Workload Control](https://arxiv.org/abs/2401.11469)
@@ -391,6 +394,7 @@ Table of Contents
 - [Survey :mag:] [ACM CSUR'19] Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools
 
 ### 2.7 DL job failures
+- [EuroSys'24] [Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures](https://dl.acm.org/doi/abs/10.1145/3627703.3650085)
 - [ATC'22] Sibylla: To Retry or Not To Retry on Deep Learning Job Failure
 - [ICSE'20] An Empirical Study on Program Failures of Deep Learning Jobs
 
@@ -403,6 +407,7 @@ Table of Contents
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
 ### 2.10 Communication optimization
+- [ASPLOS'24] [Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning](https://dl.acm.org/doi/abs/10.1145/3620666.3651379)
 - [ASPLOS'24] [Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM](https://dl.acm.org/doi/10.1145/3620665.3640427)
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
@@ -487,6 +492,8 @@ Table of Contents
 - [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
 
 ## 3. Inference System
+- [EuroSys'24] [Model Selection for Latency-Critical Inference Serving](https://dl.acm.org/doi/abs/10.1145/3627703.3629565)
+- [arxiv'24] [Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity](https://arxiv.org/abs/2404.14527)
 - [arxiv'24] [Learn To be Efficient: Build Structured Sparsity in Large Language Models](https://arxiv.org/abs/2402.06126)
 - [arxiv'24] [Sponge: Inference Serving with Dynamic SLOs Using In-Place Vertical Scaling](https://arxiv.org/abs/2404.00704v1)
 - [arxiv'24] [MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving](https://arxiv.org/abs/2404.02015)
@@ -520,8 +527,8 @@ Table of Contents
 - [arxiv'24] [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](https://arxiv.org/abs/2401.02669)
 - [VLDB'24] [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](https://www.vldb.org/pvldb/vol17/p211-xia.pdf)
 - [ASPLOS'24] [SpotServe: Serving Generative Large Language Models on Preemptible Instances](https://arxiv.org/abs/2311.15566)
+- [ASPLOS'24] [SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification](https://dl.acm.org/doi/abs/10.1145/3620666.3651335)
 - [arxiv'23] [Splitwise: Efficient generative LLM inference using phase splitting](https://arxiv.org/abs/2311.18677)
-- [arxiv'23] [SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification](https://arxiv.org/abs/2305.09781)
 - [arxiv'23] [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](https://arxiv.org/abs/2309.08168)
 - [arxiv'23] [Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving](https://arxiv.org/abs/2312.05385)
 - [arxiv'23] [Fairness in Serving Large Language Models](https://arxiv.org/abs/2401.00588)
@@ -557,6 +564,7 @@ Table of Contents
 ## 4. Mixture of Experts (MoE)
 > This is the list of papers about MoE training and inference (collected from [2.6](#26-distributed-training-parallelism) and [3](#3-inference-system)).
 
+- [arxiv'24] [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts](https://arxiv.org/abs/2404.15159)
 - [ICLR'24] [Mixture of LoRA Experts](https://openreview.net/forum?id=uWvKBCYh4S)
 - [arxiv'24] [Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](https://arxiv.org/abs/2403.07816)
 - [arxiv'24] [MoE-Infinity: Activation-Aware Expert Offloading for Efficient MoE Serving](https://arxiv.org/abs/2401.14361)
@@ -575,6 +583,7 @@ Table of Contents
 - [ICLR'17] [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://openreview.net/forum?id=B1ckMDqlg)
 
 ## 5. Federated Learning
+- [EuroSys'24] [Dordis: Efficient Federated Learning with Dropout-Resilient Differential Privacy](https://dl.acm.org/doi/abs/10.1145/3627703.3629559)
 - [arxiv'24] [Decoupled Vertical Federated Learning for Practical Training on Vertically Partitioned Data](https://arxiv.org/abs/2403.03871v1)
 - [SAC'24] [Training Heterogeneous Client Models using Knowledge Distillation in Serverless Federated Learning](https://arxiv.org/abs/2402.07295)
 - [arxiv'23] [CAFE: Carbon-Aware Federated Learning in Geographically Distributed Data Centers](https://arxiv.org/abs/2311.03615)
