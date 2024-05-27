@@ -409,6 +409,8 @@ Table of Contents
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
 ### 2.10 Communication optimization
+- [ASPLOS'24] [T3: Transparent Tracking & Triggering for Fine-grained Overlap of Compute & Collectives](https://dl.acm.org/doi/10.1145/3620665.3640410)
+- [ASPLOS'24] [TCCL: Discovering Better Communication Paths for PCIe GPU Clusters](https://dl.acm.org/doi/abs/10.1145/3620666.3651362)
 - [ASPLOS'24] [Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning](https://dl.acm.org/doi/abs/10.1145/3620666.3651379)
 - [ASPLOS'24] [Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM](https://dl.acm.org/doi/10.1145/3620665.3640427)
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
@@ -494,6 +496,11 @@ Table of Contents
 - [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
 
 ## 3. Inference System
+- [arxiv'24] [The CAP Principle for LLM Serving](https://arxiv.org/abs/2405.11299)
+- [arxiv'24] [Vidur: A Large-Scale Simulation Framework For LLM Inference](https://arxiv.org/abs/2405.05465)
+- [WWW'24] [λGrapher: A Resource-Efficient Serverless System for GNN Serving through Graph Sharing](https://dl.acm.org/doi/abs/10.1145/3589334.3645383)
+- [arxiv'24] [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](https://arxiv.org/abs/2405.04437)
+- [ICML'24] [CLLMs: Consistency Large Language Models](https://arxiv.org/abs/2403.00835)
 - [arxiv'24] [BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models](https://arxiv.org/abs/2404.18322)
 - [EuroSys'24] [Model Selection for Latency-Critical Inference Serving](https://dl.acm.org/doi/abs/10.1145/3627703.3629565)
 - [arxiv'24] [Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity](https://arxiv.org/abs/2404.14527)
@@ -567,6 +574,7 @@ Table of Contents
 ## 4. Mixture of Experts (MoE)
 > This is the list of papers about MoE training and inference (collected from [2.6](#26-distributed-training-parallelism) and [3](#3-inference-system)).
 
+- [arxiv'24] [CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts](https://arxiv.org/abs/2405.05949)
 - [arxiv'24] [AdaMoLE: Fine-Tuning Large Language Models with Adaptive Mixture of Low-Rank Adaptation Experts](https://arxiv.org/abs/2405.00361)
 - [SIGIR'24] [M3oE: Multi-Domain Multi-Task Mixture-of Experts Recommendation Framework](https://arxiv.org/abs/2404.18465)
 - [MLSys'24] [Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping](https://arxiv.org/abs/2404.19429)
