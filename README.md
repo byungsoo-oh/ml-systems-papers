@@ -501,6 +501,8 @@ Table of Contents
 - [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
 
 ## 3. Inference System
+- [ISCA'24] [Splitwise: Efficient generative LLM inference using phase splitting](https://arxiv.org/abs/2311.18677)
+- [ICML'24] [HexGen: Generative Inference of Foundation Model over Heterogeneous Decentralized Environment](https://arxiv.org/abs/2311.11514)
 - [MobiSys'24] [ARISE: High-Capacity AR Offloading Inference Serving via Proactive Scheduling](https://dl.acm.org/doi/10.1145/3643832.3661894)
 - [MobiSys'24] [Pantheon: Preemptible Multi-DNN Inference on Mobile Edge GPUs](https://dl.acm.org/doi/abs/10.1145/3643832.3661878)
 - [arxiv'24] [Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference](https://arxiv.org/abs/2405.18628)
@@ -548,11 +550,9 @@ Table of Contents
 - [VLDB'24] [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](https://www.vldb.org/pvldb/vol17/p211-xia.pdf)
 - [ASPLOS'24] [SpotServe: Serving Generative Large Language Models on Preemptible Instances](https://arxiv.org/abs/2311.15566)
 - [ASPLOS'24] [SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification](https://dl.acm.org/doi/abs/10.1145/3620666.3651335)
-- [arxiv'23] [Splitwise: Efficient generative LLM inference using phase splitting](https://arxiv.org/abs/2311.18677)
 - [arxiv'23] [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](https://arxiv.org/abs/2309.08168)
 - [arxiv'23] [Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving](https://arxiv.org/abs/2312.05385)
 - [arxiv'23] [Fairness in Serving Large Language Models](https://arxiv.org/abs/2401.00588)
-- [arxiv'23] [HexGen: Generative Inference of Foundation Model over Heterogeneous Decentralized Environment](https://arxiv.org/abs/2311.11514)
 - [arxiv'23] [Moirai: Towards Optimal Placement for Distributed Inference on Heterogeneous Devices](https://arxiv.org/abs/2312.04025)
 - [arxiv'23] [Punica: Multi-Tenant LoRA Serving](https://arxiv.org/abs/2310.18547)
 - [arxiv'23] [Pipeline Parallelism for DNN Inference with Practical Performance Guarantees](https://arxiv.org/abs/2311.03703)
