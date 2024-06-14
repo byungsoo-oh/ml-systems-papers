@@ -503,6 +503,8 @@ Table of Contents
 ## 3. Inference System
 - [ISCA'24] [Splitwise: Efficient generative LLM inference using phase splitting](https://arxiv.org/abs/2311.18677)
 - [ICML'24] [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](https://arxiv.org/abs/2311.11514)
+- [HPCA'24] [An LPDDR-based CXL-PNM Platform for TCO-efficient Inference of Transformer-based Large Language Models](https://ieeexplore.ieee.org/document/10476443)
+- [arxiv'24] [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](https://arxiv.org/abs/2406.01566)
 - [MobiSys'24] [ARISE: High-Capacity AR Offloading Inference Serving via Proactive Scheduling](https://dl.acm.org/doi/10.1145/3643832.3661894)
 - [MobiSys'24] [Pantheon: Preemptible Multi-DNN Inference on Mobile Edge GPUs](https://dl.acm.org/doi/abs/10.1145/3643832.3661878)
 - [arxiv'24] [Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference](https://arxiv.org/abs/2405.18628)
@@ -523,6 +525,7 @@ Table of Contents
 - [ISCA'24] [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](https://arxiv.org/abs/2308.12066)
 - [arxiv'24] [Minions: Accelerating Large Language Model Inference with Adaptive and Collective Speculative Decoding](https://arxiv.org/abs/2402.15678)
 - [arxiv'24] [ALTO: An Efficient Network Orchestrator for Compound AI Systems](https://arxiv.org/abs/2403.04311)
+- [ASPLOS'24] [ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference](https://dl.acm.org/doi/abs/10.1145/3620665.3640383)
 - [ASPLOS'24] [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](https://arxiv.org/abs/2403.00579)
 - [arxiv'24] [ATP: Enabling Fast LLM Serving via Attention on Top Principal Keys](https://www.arxiv.org/abs/2403.02352)
 - [arxiv'24] [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](https://arxiv.org/abs/2403.02310)
