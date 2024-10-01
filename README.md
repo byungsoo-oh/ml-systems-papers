@@ -18,8 +18,8 @@ Table of Contents
     - [1.4 Data pipeline fairness and correctness](#14-data-pipeline-fairness-and-correctness)
     - [1.5 Data labeling automation](#15-data-labeling-automation)
   - [2. Training System](#2-training-system)
-    - [2.1 Empirical Study on ML Jobs](#21-empirical-study-on-ml-jobs)
-    - [2.2 DL scheduling](#22-dl-scheduling)
+    - [2.1 Empirical study on ML Jobs](#21-empirical-study-on-ml-jobs)
+    - [2.2 DNN job scheduling](#22-dnn-job-scheduling)
     - [2.3 GPU sharing](#23-gpu-sharing)
     - [2.4 GPU memory management and optimization](#24-gpu-memory-management-and-optimization)
     - [2.5 GPU memory usage estimate](#25-gpu-memory-usage-estimate)
@@ -31,22 +31,24 @@ Table of Contents
       - [2020](#2020)
       - [~2019](#2019)
       - [Survey Papers](#survey-papers)
-    - [2.7 DL job failures](#27-dl-job-failures)
+    - [2.7 DL job failures / Fault tolerance (resilient training)](#27-dl-job-failures--fault-tolerance-resilient-training)
     - [2.8 Model checkpointing](#28-model-checkpointing)
     - [2.9 AutoML](#29-automl)
     - [2.10 Communication optimization](#210-communication-optimization)
-    - [2.11 Energy-efficient DNN training (carbon-aware)](#211-energy-efficient-dnn-training-carbon-aware)
-    - [2.12 DNN compiler](#212-dnn-compiler)
-    - [2.13 Model pruning and compression](#213-model-pruning-and-compression)
-    - [2.14 GNN training system](#214-gnn-training-system)
-    - [2.15 Congestion control for DNN training](#215-congestion-control-for-dnn-training)
-    - [2.16 Others](#216-others)
+    - [2.11 DNN compiler](#211-dnn-compiler)
+    - [2.12 Model pruning and compression](#212-model-pruning-and-compression)
+    - [2.13 GNN training system](#213-gnn-training-system)
+    - [2.14 Congestion control for DNN training](#214-congestion-control-for-dnn-training)
+    - [2.15 Others](#215-others)
   - [3. Inference System](#3-inference-system)
   - [4. Mixture of Experts (MoE)](#4-mixture-of-experts-moe)
-  - [5. Federated Learning](#5-federated-learning)
-  - [6. Privacy-Preserving ML](#6-privacy-preserving-ml)
-  - [7. ML APIs \& Application-side Optimization](#7-ml-apis--application-side-optimization)
-  - [8. ML for Systems](#8-ml-for-systems)
+  - [5. LLM Long Context](#5-llm-long-context)
+  - [6. Federated Learning](#6-federated-learning)
+  - [7. Privacy-Preserving ML](#7-privacy-preserving-ml)
+  - [8. ML APIs \& Application-side Optimization](#8-ml-apis--application-side-optimization)
+  - [9. ML for Systems](#9-ml-for-systems)
+  - [10. GPU kernel scheduling](#10-gpu-kernel-scheduling)
+  - [11 Energy-efficiency for LLM (carbon-aware)](#11-energy-efficiency-for-llm-carbon-aware)
   - [Others](#others)
 - [References](#references)
 
@@ -56,6 +58,7 @@ Table of Contents
 
 ### 1.1 Data pipeline optimization
 #### 1.1.1 General
+- [arxiv'24] [Efficient Tabular Data Preprocessing of ML Pipelines](https://arxiv.org/abs/2409.14912)
 - [arxiv'24] [cedar: Composable and Optimized Machine Learning Input Data Pipelines](https://arxiv.org/abs/2401.08895)
 - [MLSys'22] Plumber: Diagnosing and Removing Performance Bottlenecks in Machine Learning Data Pipelines
 - [ISCA'22] Understanding Data Storage and Ingestion for Large-Scale Deep Recommendation Model Training
@@ -87,6 +90,7 @@ Table of Contents
 
 
 #### 1.1.4 Specific workloads (GNN, DLRM)
+- [VLDB'25] [Eliminating Data Processing Bottlenecks in GNN Training over Large Graphs via Two-level Feature Compression](https://dl.acm.org/doi/abs/10.14778/3681954.3681968)
 - [ISCA'24] [PreSto: An In-Storage Data Preprocessing System for Training Recommendation Models](https://arxiv.org/abs/2406.14571)
 - [arxiv'23] [Towards Data-centric Graph Machine Learning: Review and Outlook](https://arxiv.org/abs/2309.10979)
 - [arxiv'23] [FlexShard: Flexible Sharding for Industry-Scale Sequence Recommendation Models](https://arxiv.org/abs/2301.02959)
@@ -130,13 +134,15 @@ Table of Contents
 - [VLDB'18] Snorkel: Rapid Training Data Creation with Weak Supervision
 
 ## 2. Training System
-### 2.1 Empirical Study on ML Jobs
+### 2.1 Empirical study on ML Jobs
 - [ICSE'24] [An Empirical Study on Low GPU Utilization of Deep Learning Jobs](https://www.computer.org/csdl/proceedings-article/icse/2024/021700a880/1V5BksrVgsg)
 - [NSDI'24] Characterization of Large Language Model Development in the Datacenter
 - [NSDI'22] MLaaS in the wild: workload analysis and scheduling in large-scale heterogeneous GPU clusters (`PAI`)
 - [ATC'19] Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads (`Philly`)
 
-### 2.2 DL scheduling
+### 2.2 DNN job scheduling
+- [arxiv'24] [Rubick: Exploiting Job Reconfigurability for Deep Learning Cluster Scheduling](https://arxiv.org/abs/2408.08586)
+- [arxiv'24] [PAL: A Variability-Aware Policy for Scheduling ML Workloads in GPU Clusters](https://arxiv.org/abs/2408.11919)
 - [OSDI'24] [MAST: Global Scheduling of ML Training across Geo-Distributed Datacenters at Hyperscale](https://www.usenix.org/conference/osdi24/presentation/choudhury)
 - [ASPLOS'24] [Heet: Accelerating Elastic Training in Heterogeneous Deep Learning Clusters](https://dl.acm.org/doi/abs/10.1145/3620665.3640375)
 - [Middleware'24] [Optimal Resource Efficiency with Fairness in Heterogeneous GPU Clusters](https://arxiv.org/abs/2403.18545)
@@ -187,6 +193,8 @@ Table of Contents
 - [OSDI'18] Gandiva: Introspective Cluster Scheduling for Deep Learning
 
 ### 2.3 GPU sharing
+- [arxiv'24] [Missile: Fine-Grained, Hardware-Level GPU Resource Isolation for Multi-Tenant DNN Inference](https://arxiv.org/abs/2407.13996)
+- [ICPP'24] [MIGER: Integrating Multi-Instance GPU and Multi-Process Service for Deep Learning Clusters](https://dl.acm.org/doi/abs/10.1145/3673038.3673089)
 - [ASPLOS'24] [RAP: Resource-aware Automated GPU Sharing for Multi-GPU Recommendation Model Training and Input Preprocessing](https://dl.acm.org/doi/abs/10.1145/3620665.3640406)
 - [EuroSys'24] [Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications](https://dl.acm.org/doi/10.1145/3627703.3629578)
 - [ATC'23] [Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent](https://www.usenix.org/conference/atc23/presentation/weng)
@@ -199,6 +207,7 @@ Table of Contents
 - [MLSys'20] Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications
 - [OSDI'20] AntMan: Dynamic Scaling on GPU Clusters for Deep Learning
 - [OSDI'20] PipeSwitch: Fast Pipelined Context Switching for Deep Learning Applications
+- [RTAS'19] [Fractional GPUs: Software-Based Compute and Memory Bandwidth Reservation for GPUs](https://ieeexplore.ieee.org/abstract/document/8743200)
 
 ### 2.4 GPU memory management and optimization
 - [arxiv'24] [GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection](https://arxiv.org/abs/2403.03507)
@@ -234,6 +243,16 @@ Table of Contents
 
 ### 2.6 Distributed training (Parallelism)
 #### 2024
+- [SOSP'24] [TENPLEX: Changing Resources of Deep Learning Jobs using Parallelizable Tensor Collections](https://arxiv.org/abs/2312.05181)
+- [arxiv'24] [Efficient Multi-Task Large Model Training via Data Heterogeneity-aware Model Management](https://arxiv.org/abs/2409.03365)
+- [arxiv'24] [FlashFlex: Accommodating Large Language Model Training over Heterogeneous Environment](https://arxiv.org/abs/2409.01143v1)
+- [arxiv'24] [PARALLELGPUOS: A Concurrent OS-level GPU Checkpoint and Restore System using Validated Speculation](https://arxiv.org/abs/2405.12079)
+- [arxiv'24] [Unicron: Economizing Self-Healing LLM Training at Scale](https://arxiv.org/abs/2401.00134)
+- [arxiv'24] [TBA: Faster Large Language Model Training Using SSD-Based Activation Offloading](https://arxiv.org/abs/2408.10013)
+- [ICPP'24] [AutoPipe: Automatic Configuration of Pipeline Parallelism in Shared GPU Cluster](https://dl.acm.org/doi/abs/10.1145/3673038.3673047)
+- [arxiv'24] [Optimus: Accelerating Large-Scale Multi-Modal LLM Training by Bubble Exploitation](https://www.arxiv.org/abs/2408.03505)
+- [Survey :mag:] [arxiv'24] [Efficient Training of Large Language Models on Distributed Infrastructures: A Survey](https://arxiv.org/abs/2407.20018)
+- [COLM'24] [LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers](https://arxiv.org/abs/2310.03294)
 - [OSDI'24] [nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training](https://www.usenix.org/conference/osdi24/presentation/lin-zhiqi)
   - [arxiv'23] [SuperScaler: Supporting Flexible DNN Parallelization via a Unified Abstraction](https://arxiv.org/abs/2301.08984)
 - [ATC'24] [Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism](https://www.usenix.org/conference/atc24/presentation/yuan)
@@ -283,9 +302,7 @@ Table of Contents
 - [EuroSys'24] [HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis](https://i.cs.hku.hk/~cwu/papers/swzhang-eurosys24.pdf)
 
 #### 2023
-- [arxiv'23] [LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers](https://arxiv.org/abs/2310.03294)
 - [ICPP'23] Mercury: Fast and Optimal Device Placement for Large Deep Learning Models
-- [arxiv'23] [TENPLEX: Changing Resources of Deep Learning Jobs using Parallelizable Tensor Collections](https://arxiv.org/abs/2312.05181)
 - [arxiv'23] [vTrain: A Simulation Framework for Evaluating Cost-effective and Compute-optimal Large Language Model Training](https://arxiv.org/abs/2312.12391)
 - [arxiv'23] [ASPEN: High-Throughput LoRA Fine-Tuning of Large Language Models with a Single GPU](https://arxiv.org/abs/2312.02515)
 - [arxiv'23] [FlexModel: A Framework for Interpretability of Distributed Large Language Models](https://arxiv.org/abs/2312.03140)
@@ -314,11 +331,12 @@ Table of Contents
 
 - [IPDPS'23] [MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism](https://liamding.cc/slides/MPipeMoE_IPDPS23.pdf)
 - [CLUSTER'23] Prophet: Fine-grained Load Balancing for Parallel Training of Large-scale MoE Models
+- [NeurIPS'23] [ASPEN: Breaking Operator Barriers for Efficient Parallelization of Deep Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2023/hash/d899a31938c7838965b589d9b14a5ca6-Abstract-Conference.html)
 - [NeurIPS'23] [DeepPCR: Parallelizing Sequential Operations in Neural Networks](https://arxiv.org/pdf/2309.16318)
 - [DAC'23] MixPipe: Efficient Bidirectional Pipeline Parallelism for Training Large-Scale Models
 - [SC'23] [Hanayo: Harnessing Wave-like Pipeline Parallelism for Enhanced Large Model Training Efficiency](https://arxiv.org/pdf/2308.15762.pdf)
 - [SOSP'23] PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation
-- [SOSP'23] [Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates](https://arxiv.org/abs/2309.08125)
+- [SOSP'23] [Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates](https://dl.acm.org/doi/abs/10.1145/3600006.3613152)
 - [TPDS'23] [Fold3D: Rethinking and Parallelizing Computational and Communicational Tasks in the Training of Large DNN Models](https://ieeexplore.ieee.org/document/10050126)
 - [HPCA'23] [Phloem: Automatic Acceleration of Irregular Applications with Fine-Grain Pipeline Parallelism](https://people.csail.mit.edu/qmn/papers/nguyen_phloem_hpca_2023_preprint.pdf)
 - [ACL'23] [Sequence Parallelism: Long Sequence Training from System Perspective](https://aclanthology.org/2023.acl-long.134/)
@@ -415,8 +433,18 @@ Table of Contents
 - [Survey :mag:] [ACM CSUR'19] Demystifying Parallel and Distributed Deep Learning
 - [Survey :mag:] [ACM CSUR'19] Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools
 
-### 2.7 DL job failures
+### 2.7 DL job failures / Fault tolerance (resilient training)
+- [arxiv'24] [Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement](https://arxiv.org/abs/2407.04656)
+- [arxiv'24] [PARALLELGPUOS: A Concurrent OS-level GPU Checkpoint and Restore System using Validated Speculation](https://arxiv.org/abs/2405.12079)
+- [SOSP'24] [SlipStream: Adapting Pipelines for Distributed Training of Large DNNs Amid Failures](https://arxiv.org/abs/2405.14009)
+- [HPDC'24] [DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models](https://dl.acm.org/doi/abs/10.1145/3625549.3658685)
 - [EuroSys'24] [Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures](https://dl.acm.org/doi/abs/10.1145/3627703.3650085)
+- [NSDI'24] [Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances](https://www.usenix.org/conference/nsdi24/presentation/duan)
+- [arxiv'23] [Unicron: Economizing Self-Healing LLM Training at Scale](https://arxiv.org/abs/2401.00134)
+- [SOSP'23] [GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints](https://dl.acm.org/doi/abs/10.1145/3600006.3613145)
+- [SOSP'23] [Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates](https://dl.acm.org/doi/abs/10.1145/3600006.3613152)
+- [NSDI'23] Bamboo: Making Preemptible Instances Resilient for Affordable Training of Large DNNs
+- [EuroSys'22] Varuna: scalable, low-cost training of massive deep learning models
 - [ATC'22] Sibylla: To Retry or Not To Retry on Deep Learning Job Failure
 - [ICSE'20] An Empirical Study on Program Failures of Deep Learning Jobs
 
@@ -429,11 +457,19 @@ Table of Contents
 - [OSDI'20] Retiarii: A Deep Learning Exploratory-Training Framework
 
 ### 2.10 Communication optimization
+- [arxiv'24] [CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts](https://arxiv.org/abs/2409.15104)
+- [arxiv'24] [Domino: Eliminating Communication in LLM Training via Generic Tensor Slicing and Overlapping](https://arxiv.org/abs/2409.15241)
+- [arxiv'24] [Exploring GPU-to-GPU Communication: Insights into Supercomputer Interconnects](https://arxiv.org/abs/2408.14090v1)
+- [arxiv'24] [Demystifying the Communication Characteristics for Distributed Transformer Models](https://arxiv.org/abs/2408.10197)
+- [ICPP'24] [Sparse Gradient Communication with AlltoAll for Accelerating Distributed Deep Learning](https://dl.acm.org/doi/abs/10.1145/3673038.3673140)
 - [NAIC @ SIGCOMM'24] [Proof-of-Concept of a Flexible and High-Fidelity Approach to Distributed DNN Training Emulation](https://dl.acm.org/doi/abs/10.1145/3672198.3673793)
 - [NAIC @ SIGCOMM'24] [Eloquent: A More Robust Transmission Scheme for LLM Token Streaming](https://dl.acm.org/doi/10.1145/3672198.3673797)
 - [NAIC @ SIGCOMM'24] [OmNICCL: Zero-cost Sparse AllReduce with Direct Cache Access and SmartNICs](https://dl.acm.org/doi/abs/10.1145/3672198.3673804)
+- [SIGCOMM'24] [RDMA over Ethernet for Distributed Training at Meta Scale](https://dl.acm.org/doi/abs/10.1145/3651890.3672233)
+- [SIGCOMM'24] [Accelerating Model Training in Multi-cluster Environments with Consumer-grade GPUs](https://dl.acm.org/doi/abs/10.1145/3651890.3672228)
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
+- [arxiv'24] [ForestColl: Efficient Collective Communications on Heterogeneous Network Fabrics](https://arxiv.org/abs/2402.06787)
 - [APNet'24] [Understanding Communication Characteristics of Distributed Training](https://people.csail.mit.edu/zhizhenzhong/papers/2024_APNET.pdf)
 - [ICLR'24] [ZeRO++: Extremely Efficient Collective Communication for Large Model Training](https://openreview.net/forum?id=gx2BT0a9MQ)
 - [ICLR'24] CO2: Efficient Distributed Training with Full Communication-Computation Overlap
@@ -445,12 +481,14 @@ Table of Contents
 - [ASPLOS'24] [Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning](https://dl.acm.org/doi/abs/10.1145/3620666.3651379)
 - [ASPLOS'24] [Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM](https://dl.acm.org/doi/10.1145/3620665.3640427)
 - [NSDI'24] [THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression](https://www.usenix.org/conference/nsdi24/presentation/li-minghao)
+- [Survey :mag:] [arxiv'23] [Communication-Efficient Distributed Deep Learning: A Comprehensive Survey](https://arxiv.org/abs/2003.06307)
 - [arxiv'23] [Optimized Network Architectures for Large Language Model Training with Billions of Parameters](https://arxiv.org/abs/2307.12169)
 - [arxiv'23] [FlexShard: Flexible Sharding for Industry-Scale Sequence Recommendation Models](https://arxiv.org/abs/2301.02959)
 - [arxiv'23] [Rethinking Memory and Communication Cost for Efficient Large Language Model Training](https://arxiv.org/abs/2310.06003)
 - [arxiv'23] [Zen: Near-Optimal Sparse Tensor Synchronization for Distributed DNN Training](https://arxiv.org/abs/2309.13254)
 - [arxiv'23] [Optimized Network Architectures for Large Language Model Training with Billions of Parameters](https://arxiv.org/abs/2307.12169)
 - [arxiv'23] [TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Training](https://arxiv.org/abs/2304.05301)
+- [INFOCOM'23] [Libra: Contention-Aware GPU Thread Allocation for Data Parallel Training in High Speed Networks](https://ieeexplore.ieee.org/abstract/document/10228922)
 - [ICDCS'23] [bbTopk: Bandwidth-Aware Sparse Allreduce with Blocked Sparsification for Efficient Distributed Training](https://ieeexplore.ieee.org/abstract/document/10272502)
 - [ICML'23] [CocktailSGD: Fine-tuning Foundation Models over 500Mbps Networks](https://proceedings.mlr.press/v202/wang23t/wang23t.pdf)
   - Related to DT-FM (NeurIPS'22)
@@ -470,13 +508,15 @@ Table of Contents
 - [PPoPP'22] Near-optimal sparse allreduce for distributed deep learning
 - [MLSys'22] [Synthesizing optimal parallelism placement and reduction strategies on hierarchical systems for deep learning](https://proceedings.mlsys.org/paper_files/paper/2022/hash/f0f9e98bc2e2f0abc3e315eaa0d808fc-Abstract.html) (`P^2`)
 - [ASPLOS'22] [Breaking the Computation and Communication Abstraction Barrier in Distributed Machine Learning Workloads](https://arxiv.org/abs/2105.05720) (`CoCoNET`)
+- [EuroSys'21] [DGCL: an efficient communication library for distributed GNN training](https://dl.acm.org/doi/abs/10.1145/3447786.3456233)
 - [ICLR'21] [Multi-Level Local SGD for Heterogeneous Hierarchical Networks](https://openreview.net/forum?id=C70cp4Cn32)
 - [SIGMOD'21] Heterogeneity-Aware Distributed Machine Learning Training via Partial Reduce [also in [2.5](#25-parallelism--distributed-training)]
 - [SC'21] Flare: flexible in-network allreduce
 - [NSDI'21] [Scaling Distributed Machine Learning with In-Network Aggregation](https://www.usenix.org/conference/nsdi21/presentation/sapio)
-- [ISCA'21] Enabling compute-communication overlap in distributed deep learning training platforms
+- [ISCA'21] [Enabling compute-communication overlap in distributed deep learning training platforms](https://dl.acm.org/doi/abs/10.1109/ISCA52012.2021.00049)
 - [PPoPP'21] [Synthesizing optimal collective algorithms](https://dl.acm.org/doi/10.1145/3437801.3441620) (`SCCL`)
 - [SIGCOMM'21] [SiP-ML: High-Bandwidth Optical Network Interconnects for Machine Learning Training](https://people.csail.mit.edu/ghobadi/papers/sipml_sigcomm_2021.pdf)
+- [ISCA'20] [An in-network architecture for accelerating shared-memory multiprocessor collectives](https://dl.acm.org/doi/10.1109/ISCA45697.2020.00085)
 - [NeurIPS'20] [Nimble: Lightweight and Parallel GPU Task Scheduling for Deep Learning](https://proceedings.neurips.cc/paper/2020/hash/5f0ad4db43d8723d18169b2e4817a160-Abstract.html)
 - [PPoPP'20] Taming unbalanced training workloads in deep learning with partial collective operations
 - [MLSys'20] [Blink: Fast and Generic Collectives for Distributed ML](https://proceedings.mlsys.org/paper_files/paper/2020/hash/cd3a9a55f7f3723133fa4a13628cdf03-Abstract.html)
@@ -487,13 +527,7 @@ Table of Contents
 - [SOSP'19] A generic communication scheduler for distributed DNN training acceleration (`ByteScheduler`)
 - [ATC'17] Poseidon: An Efficient Communication Architecture for Distributed Deep Learning on GPU Clusters
 
-### 2.11 Energy-efficient DNN training (carbon-aware)
-- [arxiv'23] [Perseus: Removing Energy Bloat from Large Model Training](https://arxiv.org/abs/2312.06902)
-- [arxiv'23] [CAFE: Carbon-Aware Federated Learning in Geographically Distributed Data Centers](https://arxiv.org/abs/2311.03615)
-- [ATC'23] EnvPipe: Performance-preserving DNN Training Framework for Saving Energy
-- [NSDI'23] Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training
-
-### 2.12 DNN compiler
+### 2.11 DNN compiler
 - [OSDI'23] Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning
 - [OSDI'23] Welder: Scheduling Deep Learning Memory Access via Tile-graph
 - [OSDI'23] Effectively Scheduling Computational Graphs of Deep Neural Networks toward Their Domain-Specific Accelerators
@@ -505,15 +539,17 @@ Table of Contents
 - [ASPLOS'20] [FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System](https://dl.acm.org/doi/10.1145/3373376.3378508)
 - [OSDI'18] [TVM: An Automated End-to-End Optimizing Compiler for Deep Learning](https://www.usenix.org/conference/osdi18/presentation/chen)
 
-### 2.13 Model pruning and compression
+### 2.12 Model pruning and compression
 - [ACL'23] [Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes](https://arxiv.org/abs/2305.02301)
 - [ICLR'23] [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](https://arxiv.org/abs/2210.17323)
 - [OSDI'23] [AdaEmbed: Adaptive Embedding for Large-Scale Recommendation Models](https://www.usenix.org/conference/osdi23/presentation/lai)
 - [ICML'22] [TSPipe: Learn from Teacher Faster with Pipelines](https://proceedings.mlr.press/v162/lim22a.html)
 
-### 2.14 GNN training system
+### 2.13 GNN training system
 > For comprehensive list of GNN systems papers, refer to [https://github.com/chwan1016/awesome-gnn-systems](https://github.com/chwan1016/awesome-gnn-systems).
 
+- [arxiv'24] [FastGL: A GPU-Efficient Framework for Accelerating Sampling-Based GNN Training at Large Scale](https://arxiv.org/abs/2409.14939)
+- [ICPP'24] [GNNDrive: Reducing Memory Contention and I/O Congestion for Disk-based GNN Training](https://dl.acm.org/doi/abs/10.1145/3673038.3673063)
 - [VLDB'24] [NeutronStream: A Dynamic GNN Training Framework with Sliding Window for Graph Streams](https://arxiv.org/abs/2312.02473)
 - [arxiv'23] [ReFresh: Reducing Memory Access from Exploiting Stable Historical Embeddings for Graph Neural Network Training](https://arxiv.org/abs/2301.07482)
 - [arxiv'23] [Helios: An Efficient Out-of-core GNN Training System on Terabyte-scale Graphs with In-memory Performance](https://arxiv.org/abs/2310.00837)
@@ -526,14 +562,29 @@ Table of Contents
 - [VLDB'22] [TGL: a general framework for temporal GNN training on billion-scale graphs](https://www.vldb.org/pvldb/vol15/p1572-zhou.pdf)
 - [OSDI'21] [P3: Distributed Deep Graph Learning at Scale](https://www.usenix.org/conference/osdi21/presentation/gandhi)
 
-### 2.15 Congestion control for DNN training
+### 2.14 Congestion control for DNN training
 - [arxiv'24] [MLTCP: Congestion Control for DNN Training](https://arxiv.org/abs/2402.09589)
 - [HotNets'22] [Congestion Control in Machine Learning Clusters](https://people.csail.mit.edu/ghobadi/papers/unfairness_hotnets_2022.pdf) 
 
-### 2.16 Others
+### 2.15 Others
 - [ATC'24] [Centimani: Enabling Fast AI Accelerator Selection for DNN Training with a Novel Performance Predictor](https://www.usenix.org/conference/atc24/presentation/xie)
 
 ## 3. Inference System
+- [arxiv'24] [Mnemosyne: Parallelization Strategies for Efficiently Serving Multi-Million Context Length LLM Inference Requests Without Approximations](https://arxiv.org/abs/2409.17264)
+- [arxiv'24] [CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts](https://arxiv.org/abs/2409.15104)
+- [arxiv'24] [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](https://arxiv.org/abs/2408.00741)
+- [HPCA'24] [KRISP: Enabling Kernel-wise RIght-sizing for Spatial Partitioned GPU Inference Servers](https://ieeexplore.ieee.org/abstract/document/10071121)
+- [arxiv'24] [Missile: Fine-Grained, Hardware-Level GPU Resource Isolation for Multi-Tenant DNN Inference](https://arxiv.org/abs/2407.13996)
+- [arxiv'24] [Efficient LLM Scheduling by Learning to Rank](https://www.arxiv.org/abs/2408.15792)
+- [arxiv'24] [P/D-Serve: Serving Disaggregated Large Language Model at Scale](https://arxiv.org/abs/2408.08147)
+- [arxiv'24] [NanoFlow: Towards Optimal Large Language Model Serving Throughput](https://arxiv.org/abs/2408.12757v1)
+- [arxiv'24] [MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language Models](https://www.arxiv.org/abs/2408.11743)
+- [SOSP'24] Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation
+- [SOSP'24] [Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving](https://arxiv.org/abs/2312.05385)
+- [arxiv'24] [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](https://arxiv.org/abs/2408.05499v1)
+- [ICPP'24] [GMM: An Efficient GPU Memory Management-based Model Serving System for Multiple DNN Inference Models](https://dl.acm.org/doi/abs/10.1145/3673038.3673122)
+- [SIGCOMM'24] [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](https://dl.acm.org/doi/abs/10.1145/3651890.3672274)
+- [ES-FoMO @ ICML'24] [CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models](https://openreview.net/pdf?id=02zPmtcZa0)
 - [OSDI'24] [dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving](https://www.usenix.org/conference/osdi24/presentation/wu-bingyang)
 - [OSDI'24] [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](https://www.usenix.org/conference/osdi24/presentation/lin-chaofan)
 - [OSDI'24] [USHER: Holistic Interference Avoidance for Resource Optimized ML Inference](https://www.usenix.org/conference/osdi24/presentation/shubha)
@@ -610,7 +661,6 @@ Table of Contents
 - [arxiv'23] [DeltaZip: Multi-Tenant Language Model Serving via Delta Compression](https://arxiv.org/abs/2312.05215)
 - [EMNLP'23] [Fast and Robust Early-Exiting Framework for Autoregressive Language Models with Synchronized Parallel Decoding](https://aclanthology.org/2023.emnlp-main.362/)
 - [arxiv'23] [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](https://arxiv.org/abs/2309.08168)
-- [arxiv'23] [Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving](https://arxiv.org/abs/2312.05385)
 - [arxiv'23] [Fairness in Serving Large Language Models](https://arxiv.org/abs/2401.00588)
 - [arxiv'23] [Moirai: Towards Optimal Placement for Distributed Inference on Heterogeneous Devices](https://arxiv.org/abs/2312.04025)
 - [arxiv'23] [Punica: Multi-Tenant LoRA Serving](https://arxiv.org/abs/2310.18547)
@@ -643,6 +693,14 @@ Table of Contents
 ## 4. Mixture of Experts (MoE)
 > This is the list of papers about MoE training and inference (collected from [2.6](#26-distributed-training-parallelism) and [3](#3-inference-system)).
 
+- [arxiv'24] [Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement](https://arxiv.org/abs/2407.04656)
+- [arxiv'24] [HMoE: Heterogeneous Mixture of Experts for Language Modeling](https://arxiv.org/abs/2408.10681)
+- [arxiv'24] [FedMoE: Personalized Federated Learning via Heterogeneous Mixture of Experts](https://arxiv.org/abs/2408.11304v1)
+- [arxiv'24] [AquilaMoE: Efficient Training for MoE Models with Scale-Up and Scale-Out Strategies](https://www.arxiv.org/abs/2408.06567)
+- [arxiv'24] [Layerwise Recurrent Router for Mixture-of-Experts](https://www.arxiv.org/abs/2408.06793)
+- [arxiv'24] [Partial Experts Checkpoint: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training](https://arxiv.org/abs/2408.04307)
+- [SRW @ ACL'24] [MoExtend: Tuning New Experts for Modality and Task Extension](https://arxiv.org/abs/2408.03511v1)
+- [arxiv'24] [MoDE: Effective Multi-task Parameter Efficient Fine-Tuning with a Mixture of Dyadic Experts](https://arxiv.org/abs/2408.01505)
 - [arxiv'24] [Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs](https://arxiv.org/abs/2407.00945)
 - [arxiv'24] [Self-MoE: Towards Compositional Large Language Models with Self-Specialized Experts](https://arxiv.org/abs/2406.12034)
 - [arxiv'24] [Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Experts Language Models](https://arxiv.org/abs/2406.06563)
@@ -658,7 +716,7 @@ Table of Contents
 - [ICLR'24] [Mixture of LoRA Experts](https://openreview.net/forum?id=uWvKBCYh4S)
 - [arxiv'24] [Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](https://arxiv.org/abs/2403.07816)
 - [arxiv'24] [MoE-Infinity: Activation-Aware Expert Offloading for Efficient MoE Serving](https://arxiv.org/abs/2401.14361)
-- [arxiv'24] [LocMoE: A Low-overhead MoE for Large Language Model Training](https://arxiv.org/abs/2401.13920)
+- [IJCAI'24] [LocMoE: A Low-overhead MoE for Large Language Model Training](https://arxiv.org/abs/2401.13920)
 - [ISCA'24] [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](https://arxiv.org/abs/2308.12066)
 - [ATC'23] [Accelerating Distributed MoE Training and Inference with Lina](https://www.usenix.org/conference/atc23/presentation/li-jiamin)
 - [ATC'23] [SmartMoE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization](https://www.usenix.org/conference/atc23/presentation/zhai)
@@ -672,7 +730,15 @@ Table of Contents
 - [JMLR'22] [Switch transformers: scaling to trillion parameter models with simple and efficient sparsity](https://dl.acm.org/doi/abs/10.5555/3586589.3586709)
 - [ICLR'17] [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://openreview.net/forum?id=B1ckMDqlg)
 
-## 5. Federated Learning
+## 5. LLM Long Context
+- [arxiv'24] [Mnemosyne: Parallelization Strategies for Efficiently Serving Multi-Million Context Length LLM Inference Requests Without Approximations](https://arxiv.org/abs/2409.17264)
+- [arxiv'24] [CSPS: A Communication-Efficient Sequence-Parallelism based Serving System for Transformer based Models with Long Prompts](https://arxiv.org/abs/2409.15104)
+- [COLM'24] [TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding](https://arxiv.org/abs/2404.11912)
+- [arxiv'24] [FocusLLM: Scaling LLM's Context by Parallel Decoding](https://arxiv.org/abs/2408.11745)
+- [Survey :mag:] [IJCAI'24] [X-former Elucidator: Reviving Efficient Attention for Long Context Language Modeling](https://www.ijcai.org/proceedings/2024/904)
+
+## 6. Federated Learning
+- [arxiv'24] [FedMoE: Personalized Federated Learning via Heterogeneous Mixture of Experts](https://arxiv.org/abs/2408.11304v1)
 - [MLSys'24] [LIFL: A Lightweight, Event-driven Serverless Platform for Federated Learning](https://arxiv.org/abs/2405.10968)
 - [arxiv'24] [FedEx: Expediting Federated Learning over Heterogeneous Mobile Devices by Overlapping and Participant Selection](https://arxiv.org/abs/2407.00943)
 - [KDD'24] [FedBiOT: LLM Local Fine-tuning in Federated Learning without Full Model](https://arxiv.org/abs/2406.17706)
@@ -703,21 +769,21 @@ Table of Contents
 - [MLSys'19] Towards Federated Learning at Scale: System Design
 - [Survey :mag:] [ACM CSUR'22] Federated Learning for Smart Healthcare: A Survey
 
-## 6. Privacy-Preserving ML
+## 7. Privacy-Preserving ML
 - [DAC'23] Privacy-Preserving DNN Training with Prefetched Meta-Keys on Heterogeneous Neural Network Accelerators
 - [ICLR'23] [MPCFormer: fast, performant and private Transformer inference with MPC](https://arxiv.org/abs/2211.01452)
 - [NeurIPS'22] [Iron: Private Inference on Transformers](https://proceedings.neurips.cc/paper_files/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract-Conference.html)
 
-## 7. ML APIs & Application-side Optimization
+## 8. ML APIs & Application-side Optimization
 - [arxiv'24] [APIServe: Efficient API Support for Large-Language Model Inferencing](https://arxiv.org/abs/2402.01869)
 - [OSDI'24] [ChameleonAPI: Automatic and Efficient Customization of Neural Networks for ML Applications](https://www.usenix.org/conference/osdi24/presentation/liu)
 - [ICML'22] [Efficient Online ML API Selection for Multi-Label Classification Tasks](https://proceedings.mlr.press/v162/chen22ad.html) (`FrugalMCT`)
 - [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
 
-## 8. ML for Systems
+## 9. ML for Systems
 - [arxiv'24] [Cloud Atlas: Efficient Fault Localization for Cloud Systems using Language Models and Causal Insight](https://arxiv.org/abs/2407.08694)
 - [arxiv'24] [LLMTune: Accelerate Database Knob Tuning with Large Language Models](https://arxiv.org/abs/2404.11581)
-- [arxiv'24] [Large Language Model Adaptation for Networking](https://arxiv.org/abs/2402.02338)
+- [SIGCOMM'24] [NetLLM: Adapting Large Language Models for Networking](https://dl.acm.org/doi/abs/10.1145/3651890.3672268)
 - [arxiv'24] [LLM-Enhanced Data Management](https://arxiv.org/abs/2402.02643)
 - [arxiv'24] [MPIrigen: MPI Code Generation through Domain-Specific Language Models](https://arxiv.org/abs/2402.09126)
 - [arxiv'24] [Can Large Language Models Write Parallel Code?](https://arxiv.org/abs/2401.12554)
@@ -725,7 +791,23 @@ Table of Contents
 - [arxiv'23] [Large Language Models for Compiler Optimization](https://arxiv.org/abs/2309.07062)
 - [VLDB'23] [How Large Language Models Will Disrupt Data Management](https://www.vldb.org/pvldb/vol16/p3302-fernandez.pdf)
 
+## 10. GPU kernel scheduling
+- [RTAS'24] [Demystifying NVIDIA GPU Internals to Enable Reliable GPU Management](https://www.cs.unc.edu/~jbakita/rtas24-private.pdf)
+  - slides: [link](https://www.cs.unc.edu/~jbakita/rtas24_slides.pdf)
+- [arxiv'21] [Characterizing Concurrency Mechanisms for NVIDIA GPUs under Deep Learning Workloads](https://arxiv.org/abs/2110.00459)
+- [SIGMETRICS'21] [Demystifying the Placement Policies of the NVIDIA GPU Thread Block Scheduler for Concurrent Kernels](https://dl.acm.org/doi/10.1145/3453953.3453972)
+- [NeurIPS'20] [Nimble: Lightweight and Parallel GPU Task Scheduling for Deep Learning](https://proceedings.neurips.cc/paper/2020/hash/5f0ad4db43d8723d18169b2e4817a160-Abstract.html)
+- [RTSS'17] [GPU Scheduling on the NVIDIA TX2: Hidden Details Revealed](https://ieeexplore.ieee.org/document/8277284)
+
+## 11 Energy-efficiency for LLM (carbon-aware)
+- [arxiv'24] [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](https://arxiv.org/abs/2408.00741)
+- [SOSP'24] [Perseus: Removing Energy Bloat from Large Model Training](https://arxiv.org/abs/2312.06902)
+- [arxiv'23] [CAFE: Carbon-Aware Federated Learning in Geographically Distributed Data Centers](https://arxiv.org/abs/2311.03615)
+- [ATC'23] EnvPipe: Performance-preserving DNN Training Framework for Saving Energy
+- [NSDI'23] Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training
+
 ## Others
+- [VLDB'25] [Chameleon: a heterogeneous and disaggregated accelerator system for retrieval-augmented language models](https://arxiv.org/abs/2310.09949)
 - [arxiv'24] [You Only Need One Step: Fast Super-Resolution with Stable Diffusion via Scale Distillation](https://arxiv.org/abs/2401.17258)
 - [arxiv'24] [Computing in the Era of Large Generative Models: From Cloud-Native to AI-Native](https://arxiv.org/abs/2401.12230)
 - [Survey :mag:] [arxiv'24] [A Survey of Resource-efficient LLM and Multimodal Foundation Models](https://arxiv.org/abs/2401.08092)
