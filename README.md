@@ -602,6 +602,8 @@ Table of Contents
 - [ATC'24] [Centimani: Enabling Fast AI Accelerator Selection for DNN Training with a Novel Performance Predictor](https://www.usenix.org/conference/atc24/presentation/xie)
 
 ## 3. Inference System
+- [arxiv'24] [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2410.02367), ([Code](https://github.com/thu-ml/SageAttention))
+- [arxiv'24] [SageAttention2 Technical Report: Accurate 4-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2411.10958), ([Code](https://github.com/thu-ml/SageAttention))
 - [arxiv'24] [Optimizing Speculative Decoding for Serving Large Language Models Using Goodput](https://arxiv.org/abs/2406.14066)
 - [ACL'24] [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](https://arxiv.org/abs/2308.15030)
 - [arxiv'24] [EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving](https://arxiv.org/abs/2411.06364)
