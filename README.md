@@ -1,12 +1,16 @@
 # Paper List for Machine Learning Systems
 
+![Awesome](https://awesome.re/badge.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/byungsoo-oh/ml-systems-papers/pulls)
+
 Paper list for broad topics in machine learning systems 
 > NOTE: Survey papers are annotated with [Survey 🔍] prefix.
 
-Table of Contents
+## Table of Contents
 <!-- TOC -->
 
 - [Paper List for Machine Learning Systems](#paper-list-for-machine-learning-systems)
+  - [Table of Contents](#table-of-contents)
   - [1. Data Processing](#1-data-processing)
     - [1.1 Data pipeline optimization](#11-data-pipeline-optimization)
       - [1.1.1 General](#111-general)
