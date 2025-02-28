@@ -650,6 +650,8 @@ Paper list for broad topics in machine learning systems
 - [OSDI'21] [P3: Distributed Deep Graph Learning at Scale](https://www.usenix.org/conference/osdi21/presentation/gandhi)
 
 ## 3. Inference System
+- [arxiv'25] [SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference](https://arxiv.org/abs/2502.18137) [[Code](https://github.com/thu-ml/SpargeAttn)]
+- [arxiv'25] [Sparse VideoGen: Accelerating Video Diffusion Transformers with Spatial-Temporal Sparsity](https://arxiv.org/abs/2502.01776)
 - [MLSys'25] [ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments](https://arxiv.org/abs/2502.09334)
 - [ICLR'25] [HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment](https://www.arxiv.org/abs/2502.07903)
 - [arxiv'25] [Memory Offloading for Large Language Model Inference with Latency SLO Guarantees](https://www.arxiv.org/abs/2502.08182)
@@ -688,8 +690,8 @@ Paper list for broad topics in machine learning systems
 - [arxiv'24] [PREBA: A Hardware/Software Co-Design for Multi-Instance GPU based AI Inference Servers](https://arxiv.org/abs/2411.19114)
 - [Survey :mag:] [ACM CSUR'24] [Resource-efficient Algorithms and Systems of Foundation Models: A Survey](https://dl.acm.org/doi/10.1145/3706418)
 - [arxiv'24] [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](https://arxiv.org/abs/2411.16102)
-- [arxiv'24] [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2410.02367), ([Code](https://github.com/thu-ml/SageAttention))
-- [arxiv'24] [SageAttention2 Technical Report: Accurate 4-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2411.10958), ([Code](https://github.com/thu-ml/SageAttention))
+- [arxiv'24] [SageAttention2: Efficient Attention with Thorough Outlier Smoothing and Per-thread INT4 Quantization](https://arxiv.org/abs/2411.10958) [[Code](https://github.com/thu-ml/SageAttention)]
+- [arxiv'24] [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2410.02367) [[Code](https://github.com/thu-ml/SageAttention)]
 - [arxiv'24] [Optimizing Speculative Decoding for Serving Large Language Models Using Goodput](https://arxiv.org/abs/2406.14066)
 - [ACL'24] [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](https://arxiv.org/abs/2404.16710)
 - [ACL'24] [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](https://arxiv.org/abs/2308.15030)
