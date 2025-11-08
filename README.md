@@ -34,6 +34,7 @@ Paper list for broad topics in machine learning systems
     - [2.9 Model compression](#29-model-compression)
     - [2.10 DNN compiler](#210-dnn-compiler)
     - [2.11 GNN training system](#211-gnn-training-system)
+    - [2.12 Attention training acceleration](#212-attention-training-acceleration)
   - [3. Inference System](#3-inference-system)
   - [4. Mixture of Experts (MoE)](#4-mixture-of-experts-moe)
   - [5. LLM Long Context](#5-llm-long-context)
@@ -780,6 +781,10 @@ Paper list for broad topics in machine learning systems
 - [VLDB'22] [TGL: a general framework for temporal GNN training on billion-scale graphs](https://www.vldb.org/pvldb/vol15/p1572-zhou.pdf)
 - [OSDI'21] [P3: Distributed Deep Graph Learning at Scale](https://www.usenix.org/conference/osdi21/presentation/gandhi)
 
+### 2.12-Attention training acceleration
+- [NeurIPS'25 Spotlight] [SageAttention3: Microscaling FP4 Attention for Inference and An Exploration of 8-Bit Training](https://arxiv.org/abs/2505.11594) [[Code](https://github.com/thu-ml/SageAttention)]
+- [arxiv'25] [SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse-Linear Attention](https://arxiv.org/abs/2509.24006) [[Code](https://github.com/thu-ml/SLA)]
+
 ## 3. Inference System
 - [arxiv'25] [Parallax: Efficient LLM Inference Service over Decentralized Environment](https://arxiv.org/abs/2509.26182)
 - [arxiv'25] [RServe: Overlapping Encoding and Prefill for Efficient LMM Inference](https://arxiv.org/abs/2509.24381)
@@ -935,8 +940,9 @@ Paper list for broad topics in machine learning systems
 - [arxiv'24] [PREBA: A Hardware/Software Co-Design for Multi-Instance GPU based AI Inference Servers](https://arxiv.org/abs/2411.19114)
 - [Survey :mag:] [ACM CSUR'24] [Resource-efficient Algorithms and Systems of Foundation Models: A Survey](https://dl.acm.org/doi/10.1145/3706418)
 - [arxiv'24] [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](https://arxiv.org/abs/2411.16102)
-- [arxiv'24] [SageAttention2: Efficient Attention with Thorough Outlier Smoothing and Per-thread INT4 Quantization](https://arxiv.org/abs/2411.10958) [[Code](https://github.com/thu-ml/SageAttention)]
-- [arxiv'24] [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2410.02367) [[Code](https://github.com/thu-ml/SageAttention)]
+- [ICML'25] [SageAttention2: Efficient Attention with Thorough Outlier Smoothing and Per-thread INT4 Quantization](https://arxiv.org/abs/2411.10958) [[Code](https://github.com/thu-ml/SageAttention)]
+- [ICLR'25] [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](https://arxiv.org/abs/2410.02367) [[Code](https://github.com/thu-ml/SageAttention)]
+- [ICML'25] [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](https://arxiv.org/abs/2502.18137) [[Code](https://github.com/thu-ml/SpargeAttn)]
 - [arxiv'24] [Optimizing Speculative Decoding for Serving Large Language Models Using Goodput](https://arxiv.org/abs/2406.14066)
 - [ACL'24] [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](https://arxiv.org/abs/2404.16710)
 - [ACL'24] [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](https://arxiv.org/abs/2308.15030)
@@ -1454,6 +1460,7 @@ Paper list for broad topics in machine learning systems
 - [arxiv'24] [RAGServe: Fast Quality-Aware RAG Systems with Configuration Adaptation](https://arxiv.org/abs/2412.10543v1)
 - [arxiv'24] [Dehallucinating Parallel Context Extension for Retrieval-Augmented Generation](https://arxiv.org/abs/2412.14905)
 - [arxiv'24] [Accelerating Retrieval-Augmented Language Model Serving with Speculation](https://arxiv.org/abs/2401.14021)
+- [ICDE'25] [SAGE: A Framework of Precise Retrieval for RAG](https://dbgroup.cs.tsinghua.edu.cn/ligl/papers/ICDE25-SAGE.pdf)
 
 ## 13. Simulation
 - [arxiv'25] [Frontier: Simulating the Next Generation of LLM Inference Systems](https://arxiv.org/abs/2508.03148v1)
