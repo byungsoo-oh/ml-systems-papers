@@ -20,14 +20,14 @@ Paper list for broad topics in machine learning systems
     - [ML job analysis on GPU clusters](#ml-job-analysis-on-gpu-clusters)
     - [Resource scheduling](#resource-scheduling)
     - [Distributed training](#distributed-training)
-    - [Resilient training \& Straggler mitigation](#resilient-training--straggler-mitigation)
     - [AutoML](#automl)
     - [GNN training system](#gnn-training-system)
   - [Inference System](#inference-system)
-  - [Attention optimization](#attention-optimization)
+  - [Attention Optimization](#attention-optimization)
   - [Mixture of Experts (MoE)](#mixture-of-experts-moe)
   - [Communication Optimization \& Network Infrastructure for Distributed ML](#communication-optimization--network-infrastructure-for-distributed-ml)
-  - [GPU Memory Management and Optimization](#gpu-memory-management-and-optimization)
+  - [Fault tolerance \& Straggler mitigation](#fault-tolerance--straggler-mitigation)
+  - [GPU Memory Management \& Optimization](#gpu-memory-management--optimization)
   - [GPU Sharing](#gpu-sharing)
   - [Compiler](#compiler)
   - [GPU Kernel Optimization](#gpu-kernel-optimization)
@@ -123,6 +123,7 @@ Paper list for broad topics in machine learning systems
 - [HotCloud'19] [The Case for Unifying Data Loading in Machine Learning Clusters](https://www.usenix.org/conference/hotcloud19/presentation/kakaraparthy)
 
 ### LLM data plane
+- [SIGMOD'26] [Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment](https://dl.acm.org/doi/abs/10.1145/3769802)
 - [EMNLP'25] [Demystifying Synthetic Data in LLM Pre-training: A Systematic Study of Scaling Laws, Benefits, and Pitfalls](https://arxiv.org/abs/2510.01631)
 - [ICDE'25] [Training Data Distribution Estimation for Optimized Pre-Training Data Management](https://www.computer.org/csdl/proceedings-article/icde/2025/360300e640/26FZD2zy2IM)
 - [arxiv'25] [Mixtera: A Data Plane for Foundation Model Training](https://arxiv.org/abs/2502.19790)
@@ -475,53 +476,6 @@ Paper list for broad topics in machine learning systems
 - [Survey :mag:] [ACM CSUR'19] Demystifying Parallel and Distributed Deep Learning
 - [Survey :mag:] [ACM CSUR'19] Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools
 
-### Resilient training & Straggler mitigation
-- [arxiv'25] [GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training](https://arxiv.org/abs/2511.07035)
-- [MICRO'25] [Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks](https://dl.acm.org/doi/full/10.1145/3725843.3756057)
-- [APSys'25] [Indispensable CPU-centric Checkpointing for GPUs](https://dl.acm.org/doi/abs/10.1145/3725783.3764394)
-- [CLUSTER'25] [Capricorn: Efficient In-Memory Checkpointing for MoE Model Training with Dynamicity Awareness](https://www.computer.org/csdl/proceedings-article/cluster/2025/11186488/2aCq0F0jiTu)
-- [arxiv'25] [MoE-PHDS: One MoE checkpoint for flexible runtime sparsity](https://arxiv.org/abs/2509.23012)
-- [arxiv'25] [ElasWave: An Elastic-Native System for Scalable Hybrid-Parallel Training](https://arxiv.org/abs/2510.00606)
-- [arxiv'25] [Efficient AllReduce with Stragglers](https://arxiv.org/abs/2505.23523)
-- [SOSP'25] [Mycroft: Tracing Dependencies in Collective Communication Towards Reliable LLM Training](https://dl.acm.org/doi/10.1145/3731569.3764848)
-- [SOSP'25] [Robust LLM Training Infrastructure at ByteDance](https://arxiv.org/abs/2509.16293)
-- [SC'25] [LowDiff: Efficient Frequent Checkpointing via Low-Cost Differential for High-Performance Distributed Training Systems](https://arxiv.org/abs/2509.04084)
-- [OSDI'25] [Understanding Stragglers in Large Model Training Using What-if Analysis](https://www.usenix.org/conference/osdi25/presentation/lin-jinkun)
-- [SIGMOD'25] [Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization](https://arxiv.org/abs/2410.13333)
-- [arxiv'25] [Checkmate: Zero-Overhead Model Checkpointing via Network Gradient Replication](https://arxiv.org/abs/2507.13522)
-- [ATC'25] [SAVE: Software-Implemented Fault Tolerance for Model Inference against GPU Memory Bit Flips](https://www.usenix.org/conference/atc25/presentation/zheng)
-- [ATC'25] [Universal Checkpointing: A Flexible and Efficient Distributed Checkpointing System for Large-Scale DNN Training with Reconfigurable Parallelism](https://www.usenix.org/conference/atc25/presentation/lian)
-- [arxiv'25] [Adaptra: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation](https://arxiv.org/abs/2504.19232v1)
-- [arxiv'25] [Nonuniform-Tensor-Parallelism: Mitigating GPU failure impact for Scaled-up LLM Training](https://arxiv.org/abs/2504.06095)
-- [arxiv'25] [Characterizing GPU Resilience and Impact on AI/HPC Systems](https://arxiv.org/abs/2503.11901)
-- [NSDI'25] [BCP: A Unified Checkpointing System for Large Foundation Model Development](https://www.usenix.org/conference/nsdi25/presentation/wan-borui)
-- [NSDI'25] [Minder: Faulty Machine Detection for Large-scale Distributed Model Training](https://www.usenix.org/conference/nsdi25/presentation/deng)
-- [EuroSys'25] [SkyServe: Serving AI Models across Regions and Clouds with Spot Instances](https://arxiv.org/abs/2411.01438)
-- [ASPLOS'25] [PCcheck: Persistent Concurrent Checkpointing for ML](https://dl.acm.org/doi/abs/10.1145/3669940.3707255)
-- [arxiv'24] [FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training](https://arxiv.org/abs/2410.12588)
-- [arxiv'24] [MoEtion: Efficient and Reliable Checkpointing for Mixture-of-Experts Models at Scale](https://www.arxiv.org/abs/2412.15411)
-- [arxiv'24] [MoC-System: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training](https://arxiv.org/abs/2408.04307)
-- [arxiv'24] [TrainMover: Efficient ML Training Live Migration with No Memory Overhead](https://www.arxiv.org/abs/2412.12636)
-- [arxiv'24] [Cloud Atlas: Efficient Fault Localization for Cloud Systems using Language Models and Causal Insight](https://arxiv.org/abs/2407.08694)
-- [arxiv'24] [ByteCheckpoint: A Unified Checkpointing System for Large Foundation Model Development](https://arxiv.org/abs/2407.20143)
-- [arxiv'24] [Universal Checkpointing: Efficient and Flexible Checkpointing for Large Scale Distributed Training](https://arxiv.org/abs/2406.18820)
-- [arxiv'24] [Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement](https://arxiv.org/abs/2407.04656)
-- [arxiv'24] [PARALLELGPUOS: A Concurrent OS-level GPU Checkpoint and Restore System using Validated Speculation](https://arxiv.org/abs/2405.12079)
-- [SOSP'24] [ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation](https://arxiv.org/abs/2405.14009)
-- [HPDC'24] [DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models](https://dl.acm.org/doi/abs/10.1145/3625549.3658685)
-- [EuroSys'24] [Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures](https://dl.acm.org/doi/abs/10.1145/3627703.3650085)
-- [NSDI'24] [Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances](https://www.usenix.org/conference/nsdi24/presentation/duan)
-- [arxiv'23] [Unicron: Economizing Self-Healing LLM Training at Scale](https://arxiv.org/abs/2401.00134)
-- [VLDB'23] [Eficient Fault Tolerance for Recommendation Model Training via Erasure Coding](https://dl.acm.org/doi/abs/10.14778/3611479.3611514)
-- [SOSP'23] [GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints](https://dl.acm.org/doi/abs/10.1145/3600006.3613145)
-- [SOSP'23] [Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates](https://dl.acm.org/doi/abs/10.1145/3600006.3613152)
-- [NSDI'23] Bamboo: Making Preemptible Instances Resilient for Affordable Training of Large DNNs
-- [EuroSys'22] Varuna: scalable, low-cost training of massive deep learning models
-- [ATC'22] Sibylla: To Retry or Not To Retry on Deep Learning Job Failure
-- [MLSys'21] [Understanding and Improving Failure Tolerant Training for Deep Learning Recommendation with Partial Recovery](https://proceedings.mlsys.org/paper_files/paper/2021/hash/f0f9e98bc2e2f0abc3e315eaa0d808fc-Abstract.html)
-- [FAST'21] CheckFreq: Frequent, Fine-Grained DNN Checkpointing
-- [ICSE'20] An Empirical Study on Program Failures of Deep Learning Jobs
-
 ### AutoML
 - [OSDI'23] Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters
 - [NSDI'23] ModelKeeper: Accelerating DNN Training via Automated Training Warmup
@@ -557,6 +511,17 @@ Paper list for broad topics in machine learning systems
 - [EuroSys'26] [KunServe: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving](https://arxiv.org/abs/2412.18169)
 - [EuroSys'26] [TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling](https://arxiv.org/abs/2510.02758)
 
+- [arxiv'25] [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](https://arxiv.org/abs/2512.03416)
+- [arxiv'25] [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](https://arxiv.org/abs/2512.04013)
+- [arxiv'25] [Accelerating Large-Scale Reasoning Model Inference with Sparse Self-Speculative Decoding](https://arxiv.org/abs/2512.01278)
+- [arxiv'25] [SIMPLE: Disaggregating Sampling from GPU Inference into a Decision Plane for Faster Distributed LLM Serving](https://arxiv.org/abs/2512.00719)
+- [arxiv'25] [OmniInfer: System-Wide Acceleration Techniques for Optimizing LLM Serving Throughput and Latency](https://arxiv.org/abs/2511.22481)
+- [arxiv'25] [OOCO: Latency-disaggregated Architecture for Online-Offline Co-locate LLM Serving](https://arxiv.org/abs/2511.21862)
+- [arxiv'25] [Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems](https://arxiv.org/abs/2511.22880)
+- [arxiv'25] [Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms](https://arxiv.org/abs/2511.11729)
+- [arxiv'25] [CLO: Efficient LLM Inference System with CPU-Light KVCache Offloading via Algorithm-System Co-Design](https://arxiv.org/abs/2511.14510)
+- [arxiv'25] [FengHuang: Next-Generation Memory Orchestration for AI Inferencing](https://arxiv.org/abs/2511.10753)
+- [arxiv'25] [FLUXSERVE: Serving a Variety of LLMs for Best-Effort Efficiency via Dynamic Temperature-Aware Multiplexing](https://openreview.net/pdf?id=I1CGMNNX5i)
 - [arxiv'25] [Synera: Synergistic LLM Serving across Device and Cloud at Scale](https://arxiv.org/abs/2511.07423)
 - [arxiv'25] [DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing](https://arxiv.org/abs/2511.04791)
 - [Middleware'25] [Argus: Quality-Aware High-Throughput Text-to-Image Inference Serving System](https://arxiv.org/abs/2511.06724)
@@ -887,10 +852,12 @@ Paper list for broad topics in machine learning systems
 - [arxiv'21] Supporting Massive DLRM Inference through Software Defined Memory
 - [MobiCom'20] SPINN: Synergistic Progressive Inference of Neural Networks over Device and Cloud
 
-## Attention optimization
+## Attention Optimization
+- [SC'25] [UltraAttn: Efficiently Parallelizing Attention through Hierarchical Context-Tiling](https://dl.acm.org/doi/full/10.1145/3712285.3759894)
 - [SC'25] [RingX: Scalable Parallel Attention for Long-Context Learning on HPC](https://dl.acm.org/doi/abs/10.1145/3712285.3759859)
 - [NeurIPS'25 Spotlight] [SageAttention3: Microscaling FP4 Attention for Inference and An Exploration of 8-Bit Training](https://arxiv.org/abs/2505.11594) [[Code](https://github.com/thu-ml/SageAttention)]
 - [arxiv'25] [SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse-Linear Attention](https://arxiv.org/abs/2509.24006) [[Code](https://github.com/thu-ml/SLA)]
+- [MLSys'25] [FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference](https://mlsys.org/virtual/2025/poster/3278)
 - [MLSys'25] [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](https://openreview.net/forum?id=RXPofAsL8F)
 - [NeurIPS'24] [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](https://proceedings.neurips.cc/paper_files/paper/2024/hash/7ede97c3e082c6df10a8d6103a2eebd2-Abstract-Conference.html)
 - [ICLR'24] [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://openreview.net/forum?id=mZn2Xyh9Ec)
@@ -900,6 +867,14 @@ Paper list for broad topics in machine learning systems
 - [EuroSys'26] Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading
 - [EuroSys'26] [MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production](https://arxiv.org/abs/2505.11432)
 
+- [arxiv'25] [Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems](https://arxiv.org/abs/2512.04476)
+- [arxiv'25] [MicroMoE: Fine-Grained Load Balancing for Mixture-of-Experts with Token Scheduling](https://arxiv.org/abs/2511.16947)
+- [arxiv'25] [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](https://arxiv.org/abs/2511.15690)
+- [arxiv'25] [MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts](https://arxiv.org/abs/2511.14102)
+- [arxiv'25] [Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models](https://arxiv.org/abs/2511.10676)
+- [arxiv'25] [FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models](https://arxiv.org/abs/2511.11505)
+- [arxiv'25] [DualSparse-MoE: Coordinating Tensor/Neuron-Level Sparsity with Expert Partition and Reconstruction](https://arxiv.org/abs/2508.18376)
+- [arxiv'25] [BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference](https://arxiv.org/abs/2511.10054)
 - [SC'25] [Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching](https://dl.acm.org/doi/abs/10.1145/3712285.3759903)
 - [arxiv'25] [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Sparse Expert Merging and Bit-packed inference](https://arxiv.org/abs/2511.04805)
 - [SC workshop'25] [Compression Error Sensitivity Analysis for Different Experts in MoE Model Inference](https://dl.acm.org/doi/abs/10.1145/3731599.3767377)
@@ -925,7 +900,7 @@ Paper list for broad topics in machine learning systems
 - [NeurIPS'25] [MoESD: Unveil Speculative Decoding's Potential for Accelerating Sparse MoE](https://arxiv.org/abs/2505.19645)
 - [NeurIPS'25] [FlyLoRA: Boosting Task Decoupling and Parameter Efficiency via Implicit Rank-Wise Mixture-of-Experts](https://arxiv.org/abs/2510.08396)
 - [NeurIPS'25] [FlowMoE: A Scalable Pipeline Scheduling Framework for Distributed Mixture-of-Experts Training](https://neurips.cc/virtual/2025/poster/118234)
-- [NeurIPS'25] [FlashMoE: Fast Distributed MoE in a Single Kernel](https://arxiv.org/abs/2506.04667) [[code](https://github.com/osayamenja/FlashMoE)]
+- [NeurIPS'25] [FlashMoE: Fast Distributed MoE in a Single Kernel](https://arxiv.org/abs/2506.04667) [[Code](https://github.com/osayamenja/FlashMoE)]
 - [arxiv'25] [Steering MoE LLMs via Expert (De)Activation](https://arxiv.org/abs/2509.09660)
 - [arxiv'25] [HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing](https://arxiv.org/abs/2509.09420)
 - [arxiv'25] [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](https://arxiv.org/abs/2509.02753)
@@ -1133,6 +1108,12 @@ Paper list for broad topics in machine learning systems
 - [ICLR'17] [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://openreview.net/forum?id=B1ckMDqlg)
 
 ## Communication Optimization & Network Infrastructure for Distributed ML
+- [EuroSys'26] [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](https://arxiv.org/abs/2504.19519)
+- [arxiv'25] [Training Foundation Models on a Full-Stack AMD Platform: Compute, Networking, and System Design](https://arxiv.org/abs/2511.17127)
+- [arxiv'25] [FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models](https://arxiv.org/abs/2511.11505)
+- [arxiv'25] [GPU-Initiated Networking for NCCL](https://arxiv.org/abs/2511.15076)
+- [SC'25] [CPU- and GPU-initiated Communication Strategies for Conjugate Gradient Methods on Large GPU Clusters](https://dl.acm.org/doi/10.1145/3712285.3759774)
+- [SC'25] [SDR-RDMA: Software-Defined Reliability Architecture for Planetary Scale RDMA Communication](https://arxiv.org/abs/2505.05366)
 - [HotNets'25] [Photonic Rails in ML Datacenters](https://arxiv.org/abs/2507.08119)
 - [arxiv'25] [DMA Collectives for Efficient ML Communication Offloads](https://arxiv.org/abs/2511.06605)
 - [arxiv'25] [Collective Communication for 100k+ GPUs](https://arxiv.org/abs/2510.20171)
@@ -1142,7 +1123,6 @@ Paper list for broad topics in machine learning systems
 - [MICRO'25] [SkipReduce: (Interconnection) Network Sparsity to Accelerate Distributed Machine Learning](https://dl.acm.org/doi/full/10.1145/3725843.3756092)
 - [MICRO'25] [Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks](https://dl.acm.org/doi/full/10.1145/3725843.3756057)
 - [arxiv'25] [MSCCL++: Rethinking GPU Communication Abstractions for Cutting-edge AI Applications](https://arxiv.org/abs/2504.09014)
-- [arxiv'25] [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](https://arxiv.org/abs/2504.19519)
 - [arxiv'25] [Toward Co-adapting Machine Learning Job Shape and Cluster Topology](https://arxiv.org/abs/2510.03891)
 - [APNET'25] [Rethinking Dynamic Networks and Heterogeneous Computing with Automatic Parallelization](https://dl.acm.org/doi/full/10.1145/3735358.3735382)
 - [arxiv'25] [Efficient AllReduce with Stragglers](https://arxiv.org/abs/2505.23523)
@@ -1165,13 +1145,11 @@ Paper list for broad topics in machine learning systems
 - [arxiv'25] [NoLoCo: No-all-reduce Low Communication Training Method for Large Models](https://arxiv.org/abs/2506.10911)
 - [arxiv'25] [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](https://arxiv.org/abs/2505.11329)
 - [arxiv'25] [FLASH: Fast All-to-All Communication in GPU Clusters](https://arxiv.org/abs/2505.09764)
-- [arxiv'25] [SDR-RDMA: Software-Defined Reliability Architecture for Planetary Scale RDMA Communication](https://arxiv.org/abs/2505.05366)
 - [arxiv'25] [MCMComm: Hardware-Software Co-Optimization for End-to-End Communication in Multi-Chip-Modules](https://arxiv.org/abs/2505.00041)
 - [arxiv'25] [GenTorrent: Scaling Large Language Model Serving with An Overley Network](https://arxiv.org/abs/2504.20101)
 - [arxiv'25] [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](https://arxiv.org/abs/2504.19442)
 - [arxiv'25] [FlashOverlap: A Lightweight Design for Efficiently Overlapping Communication and Computation](https://arxiv.org/abs/2504.19519)
-- [arxiv'25] [An Extensible Software Transport Layer for GPU Networking](https://arxiv.org/abs/2504.17307) (`UCCL`)
-  - https://github.com/uccl-project/uccl
+- [arxiv'25] [An Extensible Software Transport Layer for GPU Networking](https://arxiv.org/abs/2504.17307) (`UCCL`) [[Code](https://github.com/uccl-project/uccl)]
 - [HPCA'25] [Enhancing Large-Scale AI Training Efficiency: The C4 Solution for Real-Time Anomaly Detection and Communication Optimization](https://www.computer.org/csdl/proceedings-article/hpca/2025/064700b246/25Ko2hVHEEo)
 - [arxiv'25] [HeteroPod: XPU-Accelerated Infrastructure Offloading for Commodity Cloud-Native Applications](https://arxiv.org/abs/2503.23952)
 - [Survey :mag:] [arxiv'25] [GPU-centric Communication Schemes for HPC and ML Applications](https://arxiv.org/abs/2503.24230v1)
@@ -1285,7 +1263,56 @@ Paper list for broad topics in machine learning systems
 - [SOSP'19] A generic communication scheduler for distributed DNN training acceleration (`ByteScheduler`)
 - [ATC'17] Poseidon: An Efficient Communication Architecture for Distributed Deep Learning on GPU Clusters
 
-## GPU Memory Management and Optimization
+## Fault tolerance & Straggler mitigation
+- [arxiv'25] [FFTrainer: Fast Failover in Large-Language Model Training with Almost-Free State Management](https://arxiv.org/abs/2512.03644)
+- [arxiv'25] [FailSafe: High-performance Resilient Serving](https://arxiv.org/abs/2511.14116)
+- [arxiv'25] [GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training](https://arxiv.org/abs/2511.07035)
+- [MICRO'25] [Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks](https://dl.acm.org/doi/full/10.1145/3725843.3756057)
+- [APSys'25] [Indispensable CPU-centric Checkpointing for GPUs](https://dl.acm.org/doi/abs/10.1145/3725783.3764394)
+- [CLUSTER'25] [Capricorn: Efficient In-Memory Checkpointing for MoE Model Training with Dynamicity Awareness](https://www.computer.org/csdl/proceedings-article/cluster/2025/11186488/2aCq0F0jiTu)
+- [arxiv'25] [MoE-PHDS: One MoE checkpoint for flexible runtime sparsity](https://arxiv.org/abs/2509.23012)
+- [arxiv'25] [ElasWave: An Elastic-Native System for Scalable Hybrid-Parallel Training](https://arxiv.org/abs/2510.00606)
+- [arxiv'25] [Efficient AllReduce with Stragglers](https://arxiv.org/abs/2505.23523)
+- [SOSP'25] [Mycroft: Tracing Dependencies in Collective Communication Towards Reliable LLM Training](https://dl.acm.org/doi/10.1145/3731569.3764848)
+- [SOSP'25] [Robust LLM Training Infrastructure at ByteDance](https://arxiv.org/abs/2509.16293)
+- [SC'25] [LowDiff: Efficient Frequent Checkpointing via Low-Cost Differential for High-Performance Distributed Training Systems](https://arxiv.org/abs/2509.04084)
+- [OSDI'25] [Understanding Stragglers in Large Model Training Using What-if Analysis](https://www.usenix.org/conference/osdi25/presentation/lin-jinkun)
+- [SIGMOD'25] [Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization](https://arxiv.org/abs/2410.13333)
+- [arxiv'25] [Checkmate: Zero-Overhead Model Checkpointing via Network Gradient Replication](https://arxiv.org/abs/2507.13522)
+- [ATC'25] [SAVE: Software-Implemented Fault Tolerance for Model Inference against GPU Memory Bit Flips](https://www.usenix.org/conference/atc25/presentation/zheng)
+- [ATC'25] [Universal Checkpointing: A Flexible and Efficient Distributed Checkpointing System for Large-Scale DNN Training with Reconfigurable Parallelism](https://www.usenix.org/conference/atc25/presentation/lian)
+- [arxiv'25] [Adaptra: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation](https://arxiv.org/abs/2504.19232v1)
+- [arxiv'25] [Nonuniform-Tensor-Parallelism: Mitigating GPU failure impact for Scaled-up LLM Training](https://arxiv.org/abs/2504.06095)
+- [arxiv'25] [Characterizing GPU Resilience and Impact on AI/HPC Systems](https://arxiv.org/abs/2503.11901)
+- [NSDI'25] [BCP: A Unified Checkpointing System for Large Foundation Model Development](https://www.usenix.org/conference/nsdi25/presentation/wan-borui)
+- [NSDI'25] [Minder: Faulty Machine Detection for Large-scale Distributed Model Training](https://www.usenix.org/conference/nsdi25/presentation/deng)
+- [EuroSys'25] [SkyServe: Serving AI Models across Regions and Clouds with Spot Instances](https://arxiv.org/abs/2411.01438)
+- [ASPLOS'25] [PCcheck: Persistent Concurrent Checkpointing for ML](https://dl.acm.org/doi/abs/10.1145/3669940.3707255)
+- [arxiv'24] [FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training](https://arxiv.org/abs/2410.12588)
+- [arxiv'24] [MoEtion: Efficient and Reliable Checkpointing for Mixture-of-Experts Models at Scale](https://www.arxiv.org/abs/2412.15411)
+- [arxiv'24] [MoC-System: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training](https://arxiv.org/abs/2408.04307)
+- [arxiv'24] [TrainMover: Efficient ML Training Live Migration with No Memory Overhead](https://www.arxiv.org/abs/2412.12636)
+- [arxiv'24] [Cloud Atlas: Efficient Fault Localization for Cloud Systems using Language Models and Causal Insight](https://arxiv.org/abs/2407.08694)
+- [arxiv'24] [ByteCheckpoint: A Unified Checkpointing System for Large Foundation Model Development](https://arxiv.org/abs/2407.20143)
+- [arxiv'24] [Universal Checkpointing: Efficient and Flexible Checkpointing for Large Scale Distributed Training](https://arxiv.org/abs/2406.18820)
+- [arxiv'24] [Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement](https://arxiv.org/abs/2407.04656)
+- [arxiv'24] [PARALLELGPUOS: A Concurrent OS-level GPU Checkpoint and Restore System using Validated Speculation](https://arxiv.org/abs/2405.12079)
+- [SOSP'24] [ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation](https://arxiv.org/abs/2405.14009)
+- [HPDC'24] [DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models](https://dl.acm.org/doi/abs/10.1145/3625549.3658685)
+- [EuroSys'24] [Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures](https://dl.acm.org/doi/abs/10.1145/3627703.3650085)
+- [NSDI'24] [Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances](https://www.usenix.org/conference/nsdi24/presentation/duan)
+- [arxiv'23] [Unicron: Economizing Self-Healing LLM Training at Scale](https://arxiv.org/abs/2401.00134)
+- [VLDB'23] [Eficient Fault Tolerance for Recommendation Model Training via Erasure Coding](https://dl.acm.org/doi/abs/10.14778/3611479.3611514)
+- [SOSP'23] [GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints](https://dl.acm.org/doi/abs/10.1145/3600006.3613145)
+- [SOSP'23] [Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates](https://dl.acm.org/doi/abs/10.1145/3600006.3613152)
+- [NSDI'23] Bamboo: Making Preemptible Instances Resilient for Affordable Training of Large DNNs
+- [EuroSys'22] Varuna: scalable, low-cost training of massive deep learning models
+- [ATC'22] Sibylla: To Retry or Not To Retry on Deep Learning Job Failure
+- [MLSys'21] [Understanding and Improving Failure Tolerant Training for Deep Learning Recommendation with Partial Recovery](https://proceedings.mlsys.org/paper_files/paper/2021/hash/f0f9e98bc2e2f0abc3e315eaa0d808fc-Abstract.html)
+- [FAST'21] CheckFreq: Frequent, Fine-Grained DNN Checkpointing
+- [ICSE'20] An Empirical Study on Program Failures of Deep Learning Jobs
+
+## GPU Memory Management & Optimization
 - [SC'25] [HELM: Characterizing Unified Memory Accesses to Improve GPU Performance under Memory Oversubscription](https://dl.acm.org/doi/abs/10.1145/3712285.3759812)
 - [SC'25] [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](https://arxiv.org/abs/2509.02480)
 - [arxiv'25] [CARMA: Collocation-Aware Resource Manager with GPU Memory Estimator](https://arxiv.org/abs/2508.19073)
@@ -1357,6 +1384,8 @@ Paper list for broad topics in machine learning systems
 - [RTAS'19] [Fractional GPUs: Software-Based Compute and Memory Bandwidth Reservation for GPUs](https://ieeexplore.ieee.org/abstract/document/8743200)
 
 ## Compiler
+- [arxiv'25] [Tawa: Automatic Warp Specialization for Modern GPUs with Asynchronous References](https://arxiv.org/abs/2510.14719)
+- [arxiv'25] [Dato: A Task-Based Programming Model for Dataflow Accelerators](https://arxiv.org/abs/2509.06794)
 - [arxiv'25] [Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants](https://arxiv.org/abs/2511.02043)
 - [NeurIPS'25] [REASONING COMPILER: LLM-Guided Optimizations for Efficient Model Serving](https://openreview.net/pdf?id=2D4TuZyNnr)
 - [SOSP'25] [Mercury: Unlocking Multi-GPU Operator Optimization for LLMs via Remote Memory Scheduling](https://dl.acm.org/doi/abs/10.1145/3731569.3764798)
@@ -1386,6 +1415,13 @@ Paper list for broad topics in machine learning systems
 - [OSDI'18] [TVM: An Automated End-to-End Optimizing Compiler for Deep Learning](https://www.usenix.org/conference/osdi18/presentation/chen)
 
 ## GPU Kernel Optimization
+- [EuroSys'26] [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](https://arxiv.org/abs/2504.19519)
+- [arxiv'25] [Flash Multi-Head Feed-Forward Network](https://arxiv.org/abs/2512.06989)
+- [arxiv'25] [Iris: First-Class Multi-GPU Programming Experience in Triton](https://arxiv.org/abs/2511.12500)
+- [arxiv'25] [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](https://arxiv.org/abs/2511.15915)
+- [arxiv'25] [ParallelKittens: Systematic and Practical Simplification of Multi-GPU AI Kernels](https://arxiv.org/abs/2511.13940)
+- [SC'25] [HyTiS: Hybrid Tile Scheduling for GPU GEMM with Enhanced Wave Utilization and Cache Locality](https://dl.acm.org/doi/full/10.1145/3712285.3759771)
+- [SC'25] [UltraAttn: Efficiently Parallelizing Attention through Hierarchical Context-Tiling](https://dl.acm.org/doi/full/10.1145/3712285.3759894)
 - [arxiv'25] [HipKittens: Fast and Furious AMD Kernels](https://arxiv.org/abs/2511.08083)
 - [TACO'25] [HuntKTm: Hybrid Scheduling and Automatic Management for Efficient Kernel Execution on Modern GPUs](https://dl.acm.org/doi/abs/10.1145/3774652)
 - [NeurIPS'25] [FlashMoE: Fast Distributed MoE in a Single Kernel](https://arxiv.org/abs/2506.04667)
@@ -1393,12 +1429,15 @@ Paper list for broad topics in machine learning systems
 - [arxiv'25] [LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving](https://arxiv.org/abs/2509.01229)
 - [arxiv'25] [TileLang: A Composable Tiled Programming Model for AI Systems](https://arxiv.org/abs/2504.17577)
 - [PLDI'25] [Task-Based Tensor Computations on Modern GPUs](https://arxiv.org/abs/2504.07004)
-- [arxiv'25] [Kitsune: Enabling Dataflow Execution on GPUs](https://arxiv.org/abs/2502.18403)
+- [TACO'25] [Kitsune: Enabling Dataflow Execution on GPUs](https://dl.acm.org/doi/10.1145/3777466)
 - [ICLR'25] [ThunderKittens: Simple, Fast, and Adorable Kernels](https://openreview.net/forum?id=0fJfVOSUra)
 - [PLDI'25] [Task-Based Tensor Computations on Modern GPUs](https://dl.acm.org/doi/abs/10.1145/3729262)
 - [ASPLOS'25] [Composing Distributed Computations Through Task and Kernel Fusion](https://dl.acm.org/doi/abs/10.1145/3669940.3707216)
+- [MLSys'25] [FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference](https://mlsys.org/virtual/2025/poster/3278)
 - [arxiv'24] [ACS: Concurrent Kernel Execution on Irregular, Input-Dependent Computational Graphs](https://arxiv.org/abs/2401.12377)
 - [arxiv'24] [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](https://arxiv.org/abs/2412.05496)
+- [NeurIPS'24] [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](https://proceedings.neurips.cc/paper_files/paper/2024/hash/7ede97c3e082c6df10a8d6103a2eebd2-Abstract-Conference.html)
+- [ICLR'24] [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://openreview.net/forum?id=mZn2Xyh9Ec)
 - [CGO'24] [A Framework for Fine-Grained Synchronization of Dependent GPU Kernels](https://ieeexplore.ieee.org/abstract/document/10444873)
 - [RTAS'24] [Demystifying NVIDIA GPU Internals to Enable Reliable GPU Management](https://www.cs.unc.edu/~jbakita/rtas24-private.pdf)
   - slides: [link](https://www.cs.unc.edu/~jbakita/rtas24_slides.pdf)
@@ -1407,9 +1446,11 @@ Paper list for broad topics in machine learning systems
 - [arxiv'21] [Characterizing Concurrency Mechanisms for NVIDIA GPUs under Deep Learning Workloads](https://arxiv.org/abs/2110.00459)
 - [SIGMETRICS'21] [Demystifying the Placement Policies of the NVIDIA GPU Thread Block Scheduler for Concurrent Kernels](https://dl.acm.org/doi/10.1145/3453953.3453972)
 - [NeurIPS'20] [Nimble: Lightweight and Parallel GPU Task Scheduling for Deep Learning](https://proceedings.neurips.cc/paper/2020/hash/5f0ad4db43d8723d18169b2e4817a160-Abstract.html)
+- [NeurIPS'22] [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://proceedings.neurips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html)
 - [RTSS'17] [GPU Scheduling on the NVIDIA TX2: Hidden Details Revealed](https://ieeexplore.ieee.org/document/8277284)
 
 ## LLM Long Context
+- [SC'25] [UltraAttn: Efficiently Parallelizing Attention through Hierarchical Context-Tiling](https://dl.acm.org/doi/full/10.1145/3712285.3759894)
 - [SC'25] [RingX: Scalable Parallel Attention for Long-Context Learning on HPC](https://dl.acm.org/doi/abs/10.1145/3712285.3759859)
 - [arxiv'25] [Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism](https://arxiv.org/abs/2511.06247)
 - [NeurIPS'25] [StarTrail: Concentric Ring Sequence Parallelism for Efficient Near-Infinite-Context Transformer Model Training](https://openreview.net/forum?id=PxximqJil4)
@@ -1440,7 +1481,7 @@ Paper list for broad topics in machine learning systems
 - [arxiv'25] [Adjoint sharding for very long context training of state space models](https://arxiv.org/abs/2501.00692)
 - [arxiv'24] [LoL-PIM: Long-Context LLM Decoding with Scalable DRAM-PIM System](https://arxiv.org/abs/2412.20166)
 - [arxiv'24] [Data-Centric and Heterogeneity-Adaptive Sequence Parallelism for Efficient LLM Training](https://arxiv.org/abs/2412.01523)
-- [ICLR'24] [Efficient Streaming Language Models with Attention Sinks](https://openreview.net/forum?id=NG7sS51zVF) [[code](https://github.com/mit-han-lab/streaming-llm)]
+- [ICLR'24] [Efficient Streaming Language Models with Attention Sinks](https://openreview.net/forum?id=NG7sS51zVF) [[Code](https://github.com/mit-han-lab/streaming-llm)]
 - [SOSP'24] [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](https://dl.acm.org/doi/10.1145/3694715.3695948)
 - [arxiv'24] [USP: A Unified Sequence Parallelism Approach for Long Context Generative AI](https://arxiv.org/abs/2405.07719)
 - [arxiv'24] [Training Ultra Long Context Language Model with Fully Pipelined Distributed Transformer](https://arxiv.org/abs/2408.16978v1)
@@ -1526,10 +1567,10 @@ Paper list for broad topics in machine learning systems
 - [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
 
 ## ML for Systems
+- [arxiv'25] [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](https://arxiv.org/abs/2511.15915)
 - [arxiv'25] [ASAP: an Agentic Solution to Auto-optimize Performance of Large-Scale LLM Training](https://arxiv.org/abs/2511.03844)
 - [NeurIPS'25] [REASONING COMPILER: LLM-Guided Optimizations for Efficient Model Serving](https://openreview.net/pdf?id=2D4TuZyNnr)
-- [arxiv'25] [Barbarians at the Gate: How AI is Upending Systems Research](https://arxiv.org/abs/2510.06189)
-  - https://github.com/UCB-ADRS/ADRS
+- [arxiv'25] [Barbarians at the Gate: How AI is Upending Systems Research](https://arxiv.org/abs/2510.06189) [[Code](https://github.com/UCB-ADRS/ADRS)]
 - [arxiv'25] [SuperCoder: Assembly Program Superoptimization with Large Language Models](https://arxiv.org/abs/2505.11480)
 - [HotOS'25] [How I learned to stop worrying and love learned OS policies](https://dl.acm.org/doi/10.1145/3713082.3730384)
 - [VLDB'25] [E2ETune: End-to-End Knob Tuning via Fine-tuned Generative Language Model](https://arxiv.org/abs/2404.11581)
@@ -1583,6 +1624,7 @@ Paper list for broad topics in machine learning systems
 - [NeurIPS'24 Workshop] [Long Context RAG Performance of Large Language Models](https://arxiv.org/abs/2411.03538)
 
 ## Simulation
+- [arxiv'25] [Scalable Synthesis of distributed LLM workloads through Symbolic Tensor Graphs](https://arxiv.org/abs/2511.10480)
 - [MICRO'25] [PyTorchSim: A Comprehensive, Fast, and Accurate NPU Simulation Framework](https://dl.acm.org/doi/full/10.1145/3725843.3756045)
 - [MICRO'25] [Swift and Trustworthy Large-Scale GPU Simulation with Fine-Grained Error Modeling and Hierarchical Clustering](https://dl.acm.org/doi/full/10.1145/3725843.3757107)
 - [arxiv'25] [Frontier: Simulating the Next Generation of LLM Inference Systems](https://arxiv.org/abs/2508.03148v1)
@@ -1595,6 +1637,10 @@ Paper list for broad topics in machine learning systems
 - [MLSys'24] [Vidur: A Large-Scale Simulation Framework For LLM Inference](https://arxiv.org/abs/2405.05465)
 
 ## Systems for Agentic AI
+- [arxiv'25] [Measuring Agents in Production](https://arxiv.org/abs/2512.04123)
+- [arxiv'25] [Matrix: Peer-to-Peer Multi-Agent Synthetic Data Generation Framework](https://arxiv.org/abs/2511.21686)
+- [arxiv'25] [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](https://arxiv.org/abs/2511.20975)
+- [arxiv'25] [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](https://arxiv.org/abs/2511.15915)
 - [ML for Systems @ NeurIPS'25] [Agentic Bridge Framework: Closing the Gap Between Agentic Capability and Performance Benchmarks](https://openreview.net/pdf?id=Rv664iOMNv)
 - [arxiv'25] [Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](https://arxiv.org/abs/2511.02230)
 - [arxiv'25] [Sherlock: Reliable and Efficient Agentic Workflow Execution](https://arxiv.org/abs/2511.00330)
@@ -1625,6 +1671,12 @@ Paper list for broad topics in machine learning systems
 
 
 ## RL Post-Training
+- [arxiv'25] [ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models](https://arxiv.org/abs/2512.07843)
+- [arxiv'25] [RLHFSpec: Breaking the Efficiency Bottleneck in RLHF Training via Adaptive Drafting](https://arxiv.org/abs/2512.04752)
+- [arxiv'25] [Fast LLM Post-training via Decoupled and Best-of-N Speculation](https://arxiv.org/abs/2511.16193)
+- [arxiv'25] [Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter](https://arxiv.org/abs/2511.16665)
+- [arxiv'25] [Beat the long tail: Distribution-Aware Speculative Decoding for RL Training](https://arxiv.org/abs/2511.13841)
+- [arxiv'25] [WeChat-YATT: A Scalable, Simple, Efficient, and Production Ready Training Library](https://arxiv.org/abs/2508.07970)
 - [arxiv'25] [The Path Not Taken: RLVR Provably Learns Off the Principals](https://arxiv.org/abs/2511.08567)
 - [arxiv'25] [AReaL-Hex: Accommodating Asynchronous RL Training over Heterogeneous GPUs](https://arxiv.org/abs/2511.00796)
 - [NeurIPS'25] [Greedy Sampling Is Provably Efficient for RLHF](https://arxiv.org/abs/2510.24700)
@@ -1672,6 +1724,8 @@ Paper list for broad topics in machine learning systems
 ## Multimodal
 https://github.com/friedrichor/Awesome-Multimodal-Papers
 
+- [arxiv'25] [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](https://arxiv.org/abs/2511.15690)
+- [SoCC'25] [ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving](https://arxiv.org/abs/2502.00937)
 - [arxiv'25] [FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference](https://arxiv.org/abs/2511.05534)
 - [arxiv'25] [OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM](https://arxiv.org/abs/2510.15870)
 - [arxiv'25] [Fast-dLLM v2: Efficient Block-Diffusion LLM](https://arxiv.org/abs/2509.26328)
@@ -1686,6 +1740,7 @@ https://github.com/friedrichor/Awesome-Multimodal-Papers
 - [MLSys'25] [Marconi: Prefix Caching for the Era of Hybrid LLMs](https://mlsys.org/virtual/2025/poster/3260)
 
 ## Others
+- [arxiv'25] [Cyclotron: Compilation of Recurrences to Distributed and Systolic Architectures](https://arxiv.org/abs/2511.09987)
 - [arxiv'25] [Streaming Tensor Program: A streaming abstraction for dynamic parallelism](https://arxiv.org/abs/2511.07776)
 - [arxiv'25] [OckBench: Measuring the Efficiency of LLM Reasoning](https://arxiv.org/abs/2511.05722)
 - [SC workshop'25] [Roofline Analysis of Tightly-Coupled CPU-GPU Superchips: A Study on MI300A and GH200](https://dl.acm.org/doi/abs/10.1145/3731599.3767497)
@@ -1719,8 +1774,7 @@ https://github.com/friedrichor/Awesome-Multimodal-Papers
 - [MICRO'25] [Pimba: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving](https://arxiv.org/abs/2507.10178)
 - [CFAgentic @ ICML'25] [LLMSELECTOR: Learning to Select Models in Compound AI Systems](https://openreview.net/pdf?id=NphowWHYJj)
 - [arxiv'25] [Libra: Synergizing CUDA and Tensor Cores for High-Performance Sparse Matrix Multiplication](https://arxiv.org/abs/2506.22714)
-- [arxiv'25] [Prompt-to-Leaderboard: Prompt-Adaptive LLM Evaluations](https://openreview.net/forum?id=7VPRrzFEN8)
-  - https://github.com/lmarena/p2l
+- [arxiv'25] [Prompt-to-Leaderboard: Prompt-Adaptive LLM Evaluations](https://openreview.net/forum?id=7VPRrzFEN8) [[Code](https://github.com/lmarena/p2l)]
 - [ISCA'25] [Meta’s Second Generation AI Chip: Model-Chip Co-Design and Productionization Experiences](https://dl.acm.org/doi/pdf/10.1145/3695053.3731409)
 - [ISCA'25] [Debunking the CUDA Myth Towards GPU-based AI Systems](https://dl.acm.org/doi/pdf/10.1145/3695053.3731050)
 - [ISCA'25] [UGPU: Dynamically Constructing Unbalanced GPUs for Enhanced Resource Efficiency](https://dl.acm.org/doi/full/10.1145/3695053.3731103)
