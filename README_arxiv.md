@@ -602,6 +602,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse-Linear Attention](https://arxiv.org/abs/2509.24006) [[Code](https://github.com/thu-ml/SLA)]
 
 ## Mixture of Experts (MoE)
+- [arxiv'26] [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://www.alphaxiv.org/abs/2609.deepseek-v4-1-flash)
 - [arxiv'26] [Incast-Free MoE Rate-Based Scheduling](https://arxiv.org/abs/2607.26340)
 - [arxiv'26] [MoX: Efficient MoE Routing on Direct-Connect Topologies](https://arxiv.org/abs/2607.20220)
 - [arxiv'26] [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](https://arxiv.org/abs/2607.16184)
