@@ -1070,6 +1070,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [TAH-QUANT: Effective Activation Quantization in Pipeline Parallelism over Slow Network](https://arxiv.org/abs/2506.01352)
 - [arxiv'25] [DECA: A Near-Core LLM Decompression Accelerator Supporting Out-of-Order Invocation](https://arxiv.org/abs/2505.19349)
 - [arxiv'25] [ITERA-LLM: Boosting Sub-8-Bit Large Language Model Inference via Iterative Tensor Decomposition](https://arxiv.org/abs/2505.08981)
+- [arxiv'25] [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](https://arxiv.org/abs/2504.19874)
 - [arxiv'24] [Accelerating Distributed Deep Learning using Lossless Homomorphic Compression](https://arxiv.org/abs/2402.07529)
 
 ## Federated Learning
