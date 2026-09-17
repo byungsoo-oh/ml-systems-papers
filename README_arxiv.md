@@ -979,6 +979,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [Hercules: A Compiler for Productive Programming of Heterogeneous Systems](https://arxiv.org/abs/2503.10855)
 
 ## GPU Kernel Optimization
+- [arxiv'26] [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](https://arxiv.org/abs/2609.12379)
 - [arxiv'26] [SparseDitto: Customizing GPU Kernels for Different Sparsity Patterns with LLM-Based Agentic System](https://arxiv.org/abs/2608.05033)
 - [arxiv'26] [KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization](https://arxiv.org/abs/2608.02611)
 - [arxiv'26] [TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters](https://arxiv.org/abs/2607.22432)
@@ -1092,6 +1093,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'24] [APIServe: Efficient API Support for Large-Language Model Inferencing](https://arxiv.org/abs/2402.01869)
 
 ## ML for Systems
+- [arxiv'26] [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](https://arxiv.org/abs/2609.12379)
 - [arxiv'26] [CommBench: Can LLMs Write Correct and Efficient GPU Communication Code?](https://arxiv.org/abs/2608.04450)
 - [arxiv'26] [SparseDitto: Customizing GPU Kernels for Different Sparsity Patterns with LLM-Based Agentic System](https://arxiv.org/abs/2608.05033)
 - [arxiv'26] [KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization](https://arxiv.org/abs/2608.02611)
