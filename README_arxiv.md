@@ -292,6 +292,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'23] [GNNPipe: Accelerating Distributed Full-Graph GNN Training with Pipelined Model Parallelism](https://browse.arxiv.org/pdf/2308.10087.pdf)
 
 ## Inference System
+- [arxiv'26] [Adaptive Context Parallelism for Production LLM Serving](https://arxiv.org/abs/2609.04774)
 - [arxiv'26] [BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference](https://arxiv.org/abs/2609.13592)
 - [arxiv'26] [OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving](https://arxiv.org/abs/2609.14237)
 - [arxiv'26] [PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving](https://arxiv.org/abs/2608.05483)
@@ -604,6 +605,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse-Linear Attention](https://arxiv.org/abs/2509.24006) [[Code](https://github.com/thu-ml/SLA)]
 
 ## Mixture of Experts (MoE)
+- [arxiv'26] [Epoch: Compiling Diffusion Blocks for Sparse MoE Serving](https://arxiv.org/abs/2609.09748)
 - [arxiv'26] [Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training](https://arxiv.org/abs/2609.14306)
 - [arxiv'26] [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://www.alphaxiv.org/abs/2609.deepseek-v4-1-flash)
 - [arxiv'26] [Incast-Free MoE Rate-Based Scheduling](https://arxiv.org/abs/2607.26340)

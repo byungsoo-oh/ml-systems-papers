@@ -190,6 +190,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [OSDI'18] Gandiva: Introspective Cluster Scheduling for Deep Learning
 
 ### Distributed training
+- [SC'26] [Characterizing the Scalability and Performance of Large-Scale AI Training Under Multi-Tenancy](https://arxiv.org/abs/2609.00817)
 - [MLSys'26] [FlexTrain: Scalable Hybrid-Parallel Training with Elastic Resource Utilization and Consistent Accuracy](https://openreview.net/forum?id=h2yhNcbwSL)
 - [MLSys'26] [HexiScale: Facilitating Large Language Model Training over Heterogeneous Hardware](https://openreview.net/forum?id=KgcqSNio0U)
 - [MLSys'26] [DreamDDP: Accelerating Low-Bandwidth Geo-Distributed LLM Training with Layer-wise Partial Synchronization](https://openreview.net/forum?id=cnvw0mbZQp)
