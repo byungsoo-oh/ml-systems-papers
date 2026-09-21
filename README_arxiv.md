@@ -292,6 +292,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'23] [GNNPipe: Accelerating Distributed Full-Graph GNN Training with Pipelined Model Parallelism](https://browse.arxiv.org/pdf/2308.10087.pdf)
 
 ## Inference System
+- [arxiv'26] [Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving](https://arxiv.org/abs/2609.18112)
 - [arxiv'26] [Adaptive Context Parallelism for Production LLM Serving](https://arxiv.org/abs/2609.04774)
 - [arxiv'26] [BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference](https://arxiv.org/abs/2609.13592)
 - [arxiv'26] [OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving](https://arxiv.org/abs/2609.14237)
