@@ -1024,6 +1024,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'21] [Characterizing Concurrency Mechanisms for NVIDIA GPUs under Deep Learning Workloads](https://arxiv.org/abs/2110.00459)
 
 ## LLM Long Context
+- [arxiv'26] [NSP: Accelerating Variable-Length LLM Training via Nested Sequence Parallelism](https://arxiv.org/abs/2609.22755)
 - [arxiv'26] [Libra: Taming Attention Workload Skew in Long-Context LLM Training with Bounded Sequence Pool](https://arxiv.org/abs/2607.23250)
 - [arxiv'26] [HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention](https://arxiv.org/abs/2607.01817)
 - [arxiv'26] [Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference](https://arxiv.org/abs/2607.01831)
@@ -1188,6 +1189,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [Maya: Optimizing Deep Learning Training Workloads using Emulated Virtual Accelerators](https://arxiv.org/abs/2503.20191)
 
 ## Systems for Agentic AI
+- [arxiv'26] [DeepSeek Elastic Compute (DSec): A Sandbox Infrastructure for Effective Agentic Training at Scale](https://arxiv.org/abs/2609.22978)
 - [arxiv'26] [When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference](https://arxiv.org/abs/2608.03741)
 - [arxiv'26] [AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies](https://arxiv.org/abs/2608.02569)
 - [arxiv'26] [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](https://arxiv.org/abs/2607.29069)
