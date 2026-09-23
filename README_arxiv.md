@@ -817,6 +817,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'22] [ST-MoE: Designing Stable and Transferable Sparse Expert Models](https://arxiv.org/abs/2202.08906)
 
 ## Communication Optimization & Network Infrastructure for Distributed ML
+- [arxiv'26] [WeightBridge: An Efficient Weight Transfer Library for Reinforcement Learning](https://arxiv.org/abs/2609.25442)
 - [arxiv'26] [NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems](https://arxiv.org/abs/2608.00867)
 - [arxiv'26] [StrataCL: Fabric-Native Communication Library for Production Supernodes](https://arxiv.org/abs/2607.26444)
 - [arxiv'26] [X-Stage: An Overlooked Pipeline Stage for Communication-Computation Overlap in DiT Inference](https://arxiv.org/abs/2607.23264)
@@ -905,6 +906,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'23] [TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Training](https://arxiv.org/abs/2304.05301)
 
 ## Fault tolerance & Straggler mitigation
+- [arxiv'26] [Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo](https://arxiv.org/abs/2609.25451)
 - [arxiv'26] [Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference](https://arxiv.org/abs/2606.23521)
 - [arxiv'26] [ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters](https://arxiv.org/abs/2606.20374)
 - [arxiv'26] [LUMEN: Coordinated Failure Recovery for Distributed LLM Serving](https://arxiv.org/abs/2606.17787)
