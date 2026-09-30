@@ -817,6 +817,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'22] [ST-MoE: Designing Stable and Transferable Sparse Expert Models](https://arxiv.org/abs/2202.08906)
 
 ## Communication Optimization & Network Infrastructure for Distributed ML
+- [arxiv'26] [Purlin: Separating Orchestration from the Datapath of Collectives](https://arxiv.org/abs/2609.36954)
 - [arxiv'26] [WeightBridge: An Efficient Weight Transfer Library for Reinforcement Learning](https://arxiv.org/abs/2609.25442)
 - [arxiv'26] [NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems](https://arxiv.org/abs/2608.00867)
 - [arxiv'26] [StrataCL: Fabric-Native Communication Library for Production Supernodes](https://arxiv.org/abs/2607.26444)
