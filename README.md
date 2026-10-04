@@ -621,6 +621,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [NeurIPS'22] [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://proceedings.neurips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html)
 
 ## Mixture of Experts (MoE)
+- [EuroSys'27] [RapidMoE: Exploiting Cross-Asymmetry via Adaptive Residual Offloading for Large-Scale MoE Inference](https://arxiv.org/abs/2610.01265)
 - [ICPP'26] [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](https://arxiv.org/abs/2607.19539)
 - [CAL'26] [HyGIN: Hybrid CPU/GPU-Initiated Communication for Mixture-of-Experts Training](https://ieeexplore.ieee.org/document/11601081)
 - [SIGCOMM'26] [Balancing and Beyond: Communication-Centric Optimizations in Expert Parallelism]()
