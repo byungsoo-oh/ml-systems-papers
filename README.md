@@ -364,6 +364,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [Survey :mag:] [ACM CSUR'19] Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools
 
 ### RL post-training
+- [SIGMOD'27] [StaleFlow: Staleness-Aware Data Management for Mitigating Data Skewness in Fully Disaggregated RL Post-Training](https://dl.acm.org/doi/abs/10.1145/3837125)
 - [COLM'26] [QLPO: Quadrant-weighted Sampling for Length-aware Policy Optimization](https://arxiv.org/abs/2607.21793)
 - [ICML'26] [TVCache: A Stateful Tool-Value Cache for Post-Training LLM Agents](https://openreview.net/forum?id=tDft0AHhzH)
 - [ICML'26] [Knapsack RL: Compute-Efficient Reinforcement Learning via Heterogeneous Rollout Allocation](https://openreview.net/forum?id=v70fTOqer2)
@@ -1184,6 +1185,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [MLSys'24] [Vidur: A Large-Scale Simulation Framework For LLM Inference](https://arxiv.org/abs/2405.05465)
 
 ## Systems for Agentic AI
+- [SOSP'26] [Skill VM: Write Once, Run Everywhere Efficiently](https://dl.acm.org/doi/abs/10.1145/3830418.3843874)
 - [MLSys'26] [ADR: An Agentic Detection System for Enterprise Agentic AI Security](https://openreview.net/pdf?id=7B91Naeszw)
 - [MLSys'26] [FlashAgents: Accelerating Multi-Agent LLM Systems via Streaming Prefill Overlap](https://openreview.net/pdf?id=m14PPUfgEc)
 - [KDD'26] [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](https://arxiv.org/abs/2602.13665)

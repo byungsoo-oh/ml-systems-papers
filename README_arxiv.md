@@ -292,6 +292,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'23] [GNNPipe: Accelerating Distributed Full-Graph GNN Training with Pipelined Model Parallelism](https://browse.arxiv.org/pdf/2308.10087.pdf)
 
 ## Inference System
+- [arxiv'26] [Characterizing High Bandwidth Flash for LLM Serving](https://arxiv.org/abs/2609.39131)
 - [arxiv'26] [When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse](https://arxiv.org/abs/2609.28870)
 - [arxiv'26] [DLB: Distributed Load Balancing at Scale for Generative AI Inference](https://arxiv.org/abs/2609.21079)
 - [arxiv'26] [Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving](https://arxiv.org/abs/2609.18112)
@@ -1074,6 +1075,7 @@ A curated list of ML systems papers posted on arXiv.
 ## Model Compression
 > For comprehensive list of quantization papers, refer to https://github.com/Efficient-ML/Awesome-Model-Quantization.
 
+- [arxiv'26] [LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization](https://arxiv.org/abs/2609.38166)
 - [arxiv'26] [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](https://arxiv.org/abs/2607.16184)
 - [arxiv'26] [TileFuse: A Fused Mixed-Precision Kernel Library for Efficient Quantized LLM Inference on AMD NPUs](https://arxiv.org/abs/2606.11357)
 - [arxiv'26] [TriAxialKV: Toward Extreme Low-Precision KV-Cache Quantization for Agentic Inference Tasks](https://arxiv.org/abs/2605.17170)
