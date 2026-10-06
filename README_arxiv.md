@@ -991,6 +991,8 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [Hercules: A Compiler for Productive Programming of Heterogeneous Systems](https://arxiv.org/abs/2503.10855)
 
 ## GPU Kernel Optimization
+- [arxiv'26] [RESOLVE: Language-Agnostic Validation of GPU Kernels Through Testing, Reduction, and Proof](https://arxiv.org/abs/2610.05683)
+- [arxiv'26] [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](https://arxiv.org/abs/2610.04277)
 - [arxiv'26] [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](https://arxiv.org/abs/2609.12379)
 - [arxiv'26] [SparseDitto: Customizing GPU Kernels for Different Sparsity Patterns with LLM-Based Agentic System](https://arxiv.org/abs/2608.05033)
 - [arxiv'26] [KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization](https://arxiv.org/abs/2608.02611)
