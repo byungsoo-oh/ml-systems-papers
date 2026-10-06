@@ -982,6 +982,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [PLDI'26] [Compiling Strassen-like Matrix Multiplication Algorithms to Fast CUDA Kernels](https://dl.acm.org/doi/abs/10.1145/3808267)
 - [MLSys'26] [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](https://arxiv.org/abs/2604.13327)
 - [CGO'26] [Fast Autoscheduling for Sparse ML Frameworks](https://ieeexplore.ieee.org/abstract/document/11394842)
+- [ASPLOS'26] [CacheMind: From Miss Rates to Why - Natural-Language, Trace-Grounded Reasoning for Cache Replacement](https://doi.org/10.1145/3779212.3790136)
 - [NeurIPS'25] [REASONING COMPILER: LLM-Guided Optimizations for Efficient Model Serving](https://openreview.net/pdf?id=2D4TuZyNnr)
 - [SOSP'25] [Mercury: Unlocking Multi-GPU Operator Optimization for LLMs via Remote Memory Scheduling](https://dl.acm.org/doi/abs/10.1145/3731569.3764798)
 - [MICRO'25] [StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs](https://arxiv.org/abs/2509.13694)
@@ -1118,8 +1119,10 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [Survey :mag:] [ACM CSUR'22] Federated Learning for Smart Healthcare: A Survey
 
 ## Privacy-Preserving ML
+- [CAL'26] [FeatureBleed: Inferring Private Enriched Attributes From Sparsity-Optimized AI Accelerators](https://doi.org/10.1109/LCA.2026.3666823)
 - [ASPLOS'26] [Wave: Leveraging Architecture Observation for Privacy-Preserving Model Oversight](https://dl.acm.org/doi/abs/10.1145/3779212.3790247)
 - [CCS'25] [MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs](https://arxiv.org/abs/2508.15036)
+- [MICRO'25] [GateBleed: Exploiting On-Core Accelerator Power Gating for High Performance and Stealthy Attacks on AI](https://doi.org/10.1145/3725843.3756097)
 - [USENIX Security'25] [Phantom: Privacy-Preserving Deep Neural Network Model Obfuscation in Heterogeneous TEE and GPU System](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1136-bai.pdf)
 - [ASPLOS'24] [LazyDP: Co-Designing Algorithm-Software for Scalable Training of Differentially Private Recommendation Models](https://dl.acm.org/doi/abs/10.1145/3620665.3640384)
 - [NeurIPS'24] [Nimbus: Secure and Efficient Two-Party Inference for Transformers](https://openreview.net/forum?id=G7QS68ICPJ)
