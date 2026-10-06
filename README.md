@@ -982,7 +982,6 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [PLDI'26] [Compiling Strassen-like Matrix Multiplication Algorithms to Fast CUDA Kernels](https://dl.acm.org/doi/abs/10.1145/3808267)
 - [MLSys'26] [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](https://arxiv.org/abs/2604.13327)
 - [CGO'26] [Fast Autoscheduling for Sparse ML Frameworks](https://ieeexplore.ieee.org/abstract/document/11394842)
-- [ASPLOS'26] [CacheMind: From Miss Rates to Why - Natural-Language, Trace-Grounded Reasoning for Cache Replacement](https://doi.org/10.1145/3779212.3790136)
 - [NeurIPS'25] [REASONING COMPILER: LLM-Guided Optimizations for Efficient Model Serving](https://openreview.net/pdf?id=2D4TuZyNnr)
 - [SOSP'25] [Mercury: Unlocking Multi-GPU Operator Optimization for LLMs via Remote Memory Scheduling](https://dl.acm.org/doi/abs/10.1145/3731569.3764798)
 - [MICRO'25] [StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs](https://arxiv.org/abs/2509.13694)
@@ -1139,6 +1138,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
 
 ## ML for Systems
+- [ASPLOS'26] [CacheMind: From Miss Rates to Why - Natural-Language, Trace-Grounded Reasoning for Cache Replacement](https://doi.org/10.1145/3779212.3790136)
 - [ICML'26] [LEGO: An LLM-Enabled Hierarchical Optimizer for Tensor Computation Graphs with Structure-Aware Search and Compositional Synthesis](https://openreview.net/forum?id=kYqJ5gGjHE)
 - [MLSys'26] [PROMPTS: PeRformance Optimization via Multi-Agent Planning for LLM Training and Serving](https://openreview.net/forum?id=FTOfgVHcZn)
 - [CAIS'26] [optimize_anything: Unified Text Optimization can Outperform Specialized Systems](https://dl.acm.org/doi/full/10.1145/3786335.3813167)
