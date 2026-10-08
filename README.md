@@ -1118,8 +1118,10 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [Survey :mag:] [ACM CSUR'22] Federated Learning for Smart Healthcare: A Survey
 
 ## Privacy-Preserving ML
+- [CAL'26] [FeatureBleed: Inferring Private Enriched Attributes From Sparsity-Optimized AI Accelerators](https://doi.org/10.1109/LCA.2026.3666823)
 - [ASPLOS'26] [Wave: Leveraging Architecture Observation for Privacy-Preserving Model Oversight](https://dl.acm.org/doi/abs/10.1145/3779212.3790247)
 - [CCS'25] [MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs](https://arxiv.org/abs/2508.15036)
+- [MICRO'25] [GateBleed: Exploiting On-Core Accelerator Power Gating for High Performance and Stealthy Attacks on AI](https://doi.org/10.1145/3725843.3756097)
 - [USENIX Security'25] [Phantom: Privacy-Preserving Deep Neural Network Model Obfuscation in Heterogeneous TEE and GPU System](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1136-bai.pdf)
 - [ASPLOS'24] [LazyDP: Co-Designing Algorithm-Software for Scalable Training of Differentially Private Recommendation Models](https://dl.acm.org/doi/abs/10.1145/3620665.3640384)
 - [NeurIPS'24] [Nimbus: Secure and Efficient Two-Party Inference for Transformers](https://openreview.net/forum?id=G7QS68ICPJ)
@@ -1136,6 +1138,7 @@ For arXiv preprints, please see [`README_arxiv.md`](README_arxiv.md).
 - [NeurIPS'20] [FrugalML: How to use ML Prediction APIs more accurately and cheaply](https://proceedings.neurips.cc/paper/2020/hash/789ba2ae4d335e8a2ad283a3f7effced-Abstract.html)
 
 ## ML for Systems
+- [ASPLOS'26] [CacheMind: From Miss Rates to Why - Natural-Language, Trace-Grounded Reasoning for Cache Replacement](https://doi.org/10.1145/3779212.3790136)
 - [ICML'26] [LEGO: An LLM-Enabled Hierarchical Optimizer for Tensor Computation Graphs with Structure-Aware Search and Compositional Synthesis](https://openreview.net/forum?id=kYqJ5gGjHE)
 - [MLSys'26] [PROMPTS: PeRformance Optimization via Multi-Agent Planning for LLM Training and Serving](https://openreview.net/forum?id=FTOfgVHcZn)
 - [CAIS'26] [optimize_anything: Unified Text Optimization can Outperform Specialized Systems](https://dl.acm.org/doi/full/10.1145/3786335.3813167)
