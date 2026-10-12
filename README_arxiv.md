@@ -609,6 +609,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse-Linear Attention](https://arxiv.org/abs/2509.24006) [[Code](https://github.com/thu-ml/SLA)]
 
 ## Mixture of Experts (MoE)
+- [arxiv'26] [Zepp: Accelerating Distributed MoE Serving under Relaxed Balance Constraints](https://arxiv.org/abs/2610.11158)
 - [arxiv'26] [Mixture-of-Kittens: MoE Megakernel for NVL72s](https://arxiv.org/abs/2609.36070)
 - [arxiv'26] [Cobalt: Leveraging Expert Co-activation for Efficient Distributed MoE Training]()
 - [arxiv'26] [Weave: Fine-Grained Dynamic SM Scheduling in an MoE Megakernel for Compute-Communication Overlap](https://arxiv.org/abs/2609.21483)
