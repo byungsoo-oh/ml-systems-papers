@@ -912,6 +912,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'23] [TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Training](https://arxiv.org/abs/2304.05301)
 
 ## Fault tolerance & Straggler mitigation
+- [arxiv'26] [Leto: Fast In-Place Recovery for LLM Training on Surviving Hardware](https://arxiv.org/abs/2610.00687)
 - [arxiv'26] [Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo](https://arxiv.org/abs/2609.25451)
 - [arxiv'26] [Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference](https://arxiv.org/abs/2606.23521)
 - [arxiv'26] [ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters](https://arxiv.org/abs/2606.20374)
@@ -992,6 +993,7 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [Hercules: A Compiler for Productive Programming of Heterogeneous Systems](https://arxiv.org/abs/2503.10855)
 
 ## GPU Kernel Optimization
+- [arxiv'26] [Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling](https://arxiv.org/abs/2610.07742)
 - [arxiv'26] [RESOLVE: Language-Agnostic Validation of GPU Kernels Through Testing, Reduction, and Proof](https://arxiv.org/abs/2610.05683)
 - [arxiv'26] [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](https://arxiv.org/abs/2610.04277)
 - [arxiv'26] [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](https://arxiv.org/abs/2609.12379)
@@ -1200,6 +1202,8 @@ A curated list of ML systems papers posted on arXiv.
 - [arxiv'25] [Maya: Optimizing Deep Learning Training Workloads using Emulated Virtual Accelerators](https://arxiv.org/abs/2503.20191)
 
 ## Systems for Agentic AI
+- [arxiv'26] [Coda: Exploiting Admission Flexibility for Coding-Agent Serving](https://arxiv.org/abs/2610.03088)
+- [arxiv'26] [Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash](https://arxiv.org/abs/2610.08378)
 - [arxiv'26] [DeepSeek Elastic Compute (DSec): A Sandbox Infrastructure for Effective Agentic Training at Scale](https://arxiv.org/abs/2609.22978)
 - [arxiv'26] [When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference](https://arxiv.org/abs/2608.03741)
 - [arxiv'26] [AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies](https://arxiv.org/abs/2608.02569)
